@@ -5,7 +5,6 @@ from api.routes import api_blueprint
 from database.database import inicializar_archivo
 
 def create_app():
-    """Inicializa y configura la aplicación Flask."""
     app = Flask(__name__)
     CORS(app)  # Habilita CORS para todas las rutas
 
