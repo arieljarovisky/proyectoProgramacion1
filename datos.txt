@@ -1,4 +1,0 @@
-{'nombre': 'Ariel', 'monto': 500, 'fecha': '2025-03-31', 'descripcion': 'Ingreso por venta de producto'}
-{'nombre': 'Nacho', 'monto': 700, 'fecha': '2025-04-31', 'descripcion': 'Ingreso por venta de producto'}
-{'Nombre': 'dsadsa', 'Apellido': 'dsad', 'Edad': 'dsadsa', 'Telefono': 'dsadsa', 'Monto': 'dsadsadsa'}
-{'Nombre': 'dsadsa', 'Apellido': 'dsad', 'Edad': 'dsadsa', 'Telefono': 'dsadsa', 'Monto': 'dsadsadsa'}
