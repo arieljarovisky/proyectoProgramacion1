@@ -3,7 +3,7 @@ import os
 import json
 
 api_blueprint = Blueprint("api", __name__)
-ARCHIVO_DATOS = "datos.json"
+ARCHIVO_DATOS = "database/datos.json"
 
 # Asegurar que el archivo existe y tiene un array vacío
 if not os.path.exists(ARCHIVO_DATOS):
@@ -41,7 +41,7 @@ def guardar():
     
 @api_blueprint.route("/login", methods=["POST"])
 def login():
-    ARCHIVO_USUARIOS = "usuarios.json"
+    ARCHIVO_USUARIOS = "database/usuarios.json"
 
     try:
         datos = request.json  # Recibe JSON con email y contrasena
