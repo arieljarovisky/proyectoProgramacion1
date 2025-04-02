@@ -1,0 +1,10 @@
+[
+    {
+        "email": "ana@email.com",
+        "contrasena": "1234segura"
+    },
+    {
+        "email": "pepe@email.com",
+        "contrasena": "otraclave"
+    }
+]
