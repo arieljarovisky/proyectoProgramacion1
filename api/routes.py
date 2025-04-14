@@ -1,41 +1,48 @@
 from flask import Blueprint, request, jsonify
 import os
 import json
+import uuid
+from datetime import datetime
 
 api_blueprint = Blueprint("api", __name__)
-ARCHIVO_DATOS = "database/datos.json"
+ARCHIVO_COMPRAS = "database/compras.json"
 
 # Asegurar que el archivo existe y tiene un array vacío
-if not os.path.exists(ARCHIVO_DATOS):
-    with open(ARCHIVO_DATOS, "w") as file:
+if not os.path.exists(ARCHIVO_COMPRAS):
+    with open(ARCHIVO_COMPRAS, "w") as file:
         json.dump([], file)  # Crear un JSON con una lista vacía
 
-@api_blueprint.route("/test", methods=["GET"])
-def test():
-    return "API funcionando correctamente"
-
-@api_blueprint.route("/guardar", methods=["POST"])
-def guardar():
+@api_blueprint.route("/compras", methods=["POST"])
+def registrar_compra():
     try:
         data = request.json  # Recibe el JSON del request
-        
-        # Leer datos existentes
-        with open(ARCHIVO_DATOS, "r") as file:
-            try:
-                datos_existentes = json.load(file)  # Cargar JSON
-                if not isinstance(datos_existentes, list):  
-                    datos_existentes = []  # Si no es una lista, reiniciar
-            except json.JSONDecodeError:
-                datos_existentes = []  # Si hay un error, reiniciar
 
-        # Agregar nuevo dato
-        datos_existentes.append(data)
+        # Validación básica
+        if "total" not in data or "items" not in data:
+            return jsonify({"error": "Faltan campos obligatorios: total e items"}), 400
+
+        # Agregar campos adicionales
+        data["id_venta"] = str(uuid.uuid4())  # ID único
+        data["fecha"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")  # Fecha actual
+
+        # Leer datos existentes
+        with open(ARCHIVO_COMPRAS, "r") as file:
+            try:
+                compras_existentes = json.load(file)
+                if not isinstance(compras_existentes, list):
+                    compras_existentes = []
+            except json.JSONDecodeError:
+                compras_existentes = []
+
+        # Agregar nueva compra
+        compras_existentes.append(data)
 
         # Guardar en el archivo
-        with open(ARCHIVO_DATOS, "w") as file:
-            json.dump(datos_existentes, file, indent=4)
+        with open(ARCHIVO_COMPRAS, "w") as file:
+            json.dump(compras_existentes, file, indent=4)
 
-        return jsonify({"mensaje": "Datos guardados correctamente"}), 201
+        return jsonify({"mensaje": "Compra registrada correctamente", "id_venta": data["id_venta"]}), 201
+
     except Exception as e:
         return jsonify({"error": str(e)}), 500
     
