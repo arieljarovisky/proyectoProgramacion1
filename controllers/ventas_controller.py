@@ -69,10 +69,11 @@ def actualizar_venta(id):
 def eliminar_venta(id):
     ventas = cargar_ventas()
 
-    ventas_filtradas = [venta for venta in ventas if venta["id"] != id]
+    # Usamos lambda para filtrar las ventas que no tienen el mismo ID
+    ventas_filtradas = list(filter(lambda venta: venta["id"] != id, ventas))
 
     if len(ventas_filtradas) == len(ventas):
         return jsonify({"error": "Venta no encontrada"}), 404
 
     guardar_ventas(ventas_filtradas)
-    return jsonify({"message": "Venta eliminada correctamente"}), 200    
+    return jsonify({"message": "Venta eliminada correctamente"}), 200
