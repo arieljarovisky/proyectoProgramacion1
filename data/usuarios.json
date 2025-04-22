@@ -1,10 +1,9 @@
 [
-    {
-        "email": "ana@email.com",
-        "contrasena": "1234segura"
-    },
-    {
-        "email": "pepe@email.com",
-        "contrasena": "otraclave"
-    }
+
+  {
+    "id": 5,
+    "nombre": "are1",
+    "email": "tumama@puto.com",
+    "contrasena": "1234"
+  }
 ]
