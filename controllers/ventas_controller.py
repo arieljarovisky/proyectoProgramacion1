@@ -46,4 +46,33 @@ def registrar_venta():
 def obtener_ventas():
     ventas = cargar_ventas()
     return jsonify(ventas), 200
-    
+
+# Actualizar una venta existente
+def actualizar_venta(id):
+    data = request.get_json()
+
+    if not data or 'items' not in data or 'total' not in data:
+        return jsonify({"error": "Datos inválidos"}), 400
+
+    ventas = cargar_ventas()
+
+    for venta in ventas:
+        if venta["id"] == id:
+            venta["items"] = data["items"]
+            venta["total"] = data["total"]
+            guardar_ventas(ventas)
+            return jsonify({"message": "Venta actualizada correctamente"}), 200
+
+    return jsonify({"error": "Venta no encontrada"}), 404
+
+# Eliminar una venta por ID
+def eliminar_venta(id):
+    ventas = cargar_ventas()
+
+    ventas_filtradas = [venta for venta in ventas if venta["id"] != id]
+
+    if len(ventas_filtradas) == len(ventas):
+        return jsonify({"error": "Venta no encontrada"}), 404
+
+    guardar_ventas(ventas_filtradas)
+    return jsonify({"message": "Venta eliminada correctamente"}), 200    
