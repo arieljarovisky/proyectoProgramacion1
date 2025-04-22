@@ -1,22 +1,11 @@
-import os
 from flask import Flask
 from flask_cors import CORS
-from api.routes import api_blueprint
-from database.database import inicializar_archivo
+from routes.api_routes import ventas_bp
 
-def create_app():
-    app = Flask(__name__)
-    CORS(app)  # Habilita CORS para todas las rutas
+app = Flask(__name__)
+CORS(app)
 
-    # Inicializar la base de datos (archivos)
-    inicializar_archivo()
+app.register_blueprint(ventas_bp)
 
-    # Registrar las rutas de la API
-    app.register_blueprint(api_blueprint)
-
-    return app
-
-if __name__ == "__main__":
-    # Ejecutar la aplicación en modo debug
-    app = create_app()
-    app.run(debug=True, host="0.0.0.0", port=5000)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000, debug=True)
