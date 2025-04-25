@@ -9,5 +9,10 @@ CORS(app)
 app.register_blueprint(ventas_bp)
 app.register_blueprint(usuarios_bp)
 
+# Endpoint de prueba para verificar que el servidor responde
+@app.route('/api/ping')
+def ping():
+    return {'message': 'pong'}, 200
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
