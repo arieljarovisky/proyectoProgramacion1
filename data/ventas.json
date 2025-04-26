@@ -1,7 +1,31 @@
 [
   {
     "id": 1,
-    "items": "hola",
-    "total": 1234
+    "items": [
+      {
+        "nombre": "Mouse",
+        "cantidad": 2,
+        "precio": 1500
+      },
+      {
+        "nombre": "Teclado",
+        "cantidad": 1,
+        "precio": 3000
+      }
+    ],
+    "total": 6000,
+    "fecha": "2025-04-26 00:23:57"
+  },
+  {
+    "id": 2,
+    "items": [
+      {
+        "nombre": "Mouse",
+        "cantidad": 2,
+        "precio": 1500
+      }
+    ],
+    "total": 6000,
+    "fecha": "2025-04-26 00:24:24"
   }
 ]
