@@ -1,1 +1,23 @@
-[]
+{
+  "saldo": 100,
+  "movimientos": [
+    {
+      "tipo": "ingreso",
+      "monto": 100,
+      "descripcion": "Venta",
+      "fecha": "2025-04-26 13:56:24"
+    },
+    {
+      "tipo": "ingreso",
+      "monto": 300,
+      "descripcion": "Venta",
+      "fecha": "2025-04-26 13:57:15"
+    },
+    {
+      "tipo": "egreso",
+      "monto": 300,
+      "descripcion": "compra",
+      "fecha": "2025-04-26 13:57:50"
+    }
+  ]
+}
