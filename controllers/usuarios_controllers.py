@@ -25,9 +25,9 @@ def registrar_usuario():
 
     nombre = data.get('nombre', '').strip().lower()
     email = data.get('email', '').strip().lower()
-    password = data.get('contrasena', '').strip()
+    contrasena = data.get('contrasena', '').strip()
 
-    if not nombre or not email or not password:
+    if not nombre or not email or not contrasena:
         return jsonify({"error": "Todos los campos son obligatorios"}), 400
 
     if '@' not in email:
@@ -35,42 +35,53 @@ def registrar_usuario():
 
     usuarios = cargar_usuarios()
 
-    nuevo_usuario = {
-        "id": len(usuarios) + 1,
-        "nombre": nombre,
-        "email": email,
-        "contraseña": password  # En producción, se debe hashear
-    }
+    nuevo_usuario = [
+        len(usuarios) + 1,  # ID
+        nombre,
+        email,
+        contrasena
+    ]
 
     usuarios.append(nuevo_usuario)
     guardar_usuarios(usuarios)
 
-    return jsonify({"message": "Usuario registrado", "usuario": nuevo_usuario}), 201
+    return jsonify({"message": "Usuario registrado", "usuario": {
+        "id": nuevo_usuario[0],
+        "nombre": nuevo_usuario[1],
+        "email": nuevo_usuario[2]
+    }}), 201
 
 # Obtener todos los usuarios
 def obtener_usuarios():
     usuarios = cargar_usuarios()
-    return jsonify(usuarios), 200
+    usuarios_formateados = [
+        {"id": u[0], "nombre": u[1], "email": u[2]} for u in usuarios
+    ]
+    return jsonify(usuarios_formateados), 200
 
 # Actualizar usuario
 def actualizar_usuario(usuario_id):
     data = request.get_json()
     usuarios = cargar_usuarios()
 
-    for u in usuarios:
-        if u["id"] == usuario_id:
-            u["nombre"] = data.get("nombre", u["nombre"]).strip().lower()
-            u["email"] = data.get("email", u["email"]).strip().lower()
-            u["contraseña"] = data.get("contraseña", u["contraseña"]).strip()
+    for i in range(len(usuarios)):
+        if usuarios[i][0] == usuario_id:
+            usuarios[i][1] = data.get("nombre", usuarios[i][1]).strip().lower()
+            usuarios[i][2] = data.get("email", usuarios[i][2]).strip().lower()
+            usuarios[i][3] = data.get("contrasena", usuarios[i][3]).strip()
             guardar_usuarios(usuarios)
-            return jsonify({"message": "Usuario actualizado", "usuario": u}), 200
+            return jsonify({"message": "Usuario actualizado", "usuario": {
+                "id": usuarios[i][0],
+                "nombre": usuarios[i][1],
+                "email": usuarios[i][2]
+            }}), 200
 
     return jsonify({"error": "Usuario no encontrado"}), 404
 
 # Eliminar usuario
 def eliminar_usuario(usuario_id):
     usuarios = cargar_usuarios()
-    usuarios_filtrados = [u for u in usuarios if u["id"] != usuario_id]
+    usuarios_filtrados = [u for u in usuarios if u[0] != usuario_id]
 
     if len(usuarios_filtrados) == len(usuarios):
         return jsonify({"error": "Usuario no encontrado"}), 404
@@ -93,8 +104,11 @@ def login_usuario():
 
     usuarios = cargar_usuarios()
     for u in usuarios:
-        if u["email"] == email and u["contrasena"] == contrasena:
-            return jsonify({"message": "Login exitoso", "usuario": u}), 200
+        if u[2] == email and u[3] == contrasena:
+            return jsonify({"message": "Login exitoso", "usuario": {
+                "id": u[0],
+                "nombre": u[1],
+                "email": u[2]
+            }}), 200
 
     return jsonify({"error": "Usuario no encontrado o credenciales inválidas"}), 401
-
