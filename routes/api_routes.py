@@ -1,7 +1,7 @@
 from flask import Blueprint
 from controllers.ventas_controller import registrar_venta, obtener_ventas, actualizar_venta, eliminar_venta
 from controllers.metricas_controller import obtener_metricas
-from controllers.productos_controller import obtener_productos, registrar_producto
+from controllers.productos_controller import obtener_productos, registrar_producto, eliminar_producto, editar_producto
 from controllers.caja_controller import obtener_caja, registrar_ingreso, registrar_egreso
 
 # Blueprint para ventas
@@ -34,6 +34,13 @@ productos_bp.route('', methods=['GET'])(obtener_productos)
 # Ruta para registrar un nuevo producto
 productos_bp.route('', methods=['POST'])(registrar_producto)
 
+#Ruta para borrar un producto
+productos_bp.route('/<int:id>', methods=['DELETE'])(eliminar_producto)
+
+#Ruta para editar un producto
+productos_bp.route('/<int:id>', methods=['PUT'])(editar_producto)
+
+#Ruta para metricas
 # Ruta para obtener métricas
 ventas_bp.route("/metricas", methods=["GET"])(obtener_metricas)
 

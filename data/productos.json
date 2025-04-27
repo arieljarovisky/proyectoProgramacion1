@@ -1,10 +1,10 @@
 [
   {
     "id": 1,
-    "nombre": "Remera Oversize Talle M",
+    "nombre": "Nuevo nombre del producto",
     "descripcion": "Remera de algod\u00f3n 100% con corte amplio",
-    "precio": 32000,
-    "stock": 15,
+    "precio": "15000",
+    "stock": 20,
     "categoria": "Indumentaria"
   },
   {

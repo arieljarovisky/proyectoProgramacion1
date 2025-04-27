@@ -51,3 +51,32 @@ def registrar_producto():
         "message": "Producto registrado correctamente",
         "producto_id": nuevo_producto["id"]
     }), 201
+    
+def eliminar_producto(id):
+    productos=cargar_productos()
+    productos_filtrados=list(filter(lambda producto:producto["id"]!=id, productos))
+
+    if len(productos_filtrados)==len(productos):
+        return jsonify({"error": "Producto no encontrado"}), 404
+    
+    guardar_productos(productos_filtrados)
+    return jsonify({"message": "Producto eliminado correctamente"}), 200
+
+def editar_producto(id):
+    productos  = cargar_productos()
+    data = request.get_json()
+    
+    producto_encontrado =  next((producto for producto in productos if producto["id"] == id), None)
+    if producto_encontrado is None:
+        return jsonify({"error": "Producto no encontrado"}), 404
+    
+    # Actualizamos los campos que vienen en la solicitud
+    producto_encontrado["nombre"] = data.get("nombre", producto_encontrado["nombre"])
+    producto_encontrado["descripcion"] = data.get("descripcion", producto_encontrado["descripcion"])
+    producto_encontrado["precio"] = data.get("precio", producto_encontrado["precio"])
+    producto_encontrado["stock"] = data.get("stock", producto_encontrado["stock"])
+    producto_encontrado["categoria"] = data.get("categoria", producto_encontrado["categoria"])
+    
+    guardar_productos(productos)
+    
+    return jsonify({"message": "Producto actualizado correctamente"}), 200
