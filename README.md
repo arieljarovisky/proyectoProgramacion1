@@ -86,8 +86,9 @@ Todo en una plataforma accesible, intuitiva y pensada para usuarios sin conocimi
 ## 🚤 Cómo levantar el proyecto (setup)
 
 ### 1. Cloná ambos repositorios:
-- Frontend: `https://github.com/...`
-- Backend: `https://github.com/...`
+- Frontend: [Repositorio Frontend](https://github.com/arieljarovisky/Frontend-Proyecto-progrmacion-1)
+- Backend: [Repositorio Backend](https://github.com/arieljarovisky/proyectoProgramacion1)
+
 
 ### 2. Instalá dependencias del backend:
 Desde la terminal, ingresá en la carpeta del backend y ejecutá el siguiente comando para instalar las dependencias necesarias:
