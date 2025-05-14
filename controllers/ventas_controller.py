@@ -2,6 +2,7 @@ from flask import request, jsonify
 import json
 import os
 from datetime import datetime
+from controllers.productos_controller import cargar_productos, guardar_productos
 
 VENTAS_FILE = "data/ventas.json"
 
@@ -29,6 +30,19 @@ def registrar_venta():
     if not data or "items" not in data or not isinstance(data["items"], list) or len(data["items"]) == 0 or "total" not in data:
         return jsonify({"error": "Datos inválidos"}), 400
 
+    productos = cargar_productos()
+
+    # Verificar stock y descontar
+    for item in data["items"]:
+        producto = next((p for p in productos if p["id"] == item["id"]), None)
+        if not producto:
+            return jsonify({"error": f"Producto con ID {item['id']} no encontrado"}), 404
+        if producto["stock"] < item["cantidad"]:
+            return jsonify({"error": f"Stock insuficiente para el producto '{producto['nombre']}'"}), 400
+        producto["stock"] -= item["cantidad"]
+
+    guardar_productos(productos)
+
     ventas = cargar_ventas()
 
     venta = {
@@ -42,16 +56,13 @@ def registrar_venta():
     guardar_ventas(ventas)
 
     return (
-        jsonify(
-            {
-                "message": "Venta registrada correctamente",
-                "venta_id": venta["id"],
-                "fecha": venta["fecha"],
-            }
-        ),
+        jsonify({
+            "message": "Venta registrada correctamente",
+            "venta_id": venta["id"],
+            "fecha": venta["fecha"],
+        }),
         201,
     )
-
 
 
 # Obtener todas las ventas
