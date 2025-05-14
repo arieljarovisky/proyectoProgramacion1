@@ -517,5 +517,17 @@
     ],
     "total": 65000,
     "fecha": "2025-05-14 17:05:55"
+  },
+  {
+    "id": 38,
+    "items": [
+      {
+        "id": 5,
+        "nombre": "Buzo 'Basics' Oversize",
+        "cantidad": 2
+      }
+    ],
+    "total": 130000,
+    "fecha": "2025-05-14 17:08:44"
   }
 ]
