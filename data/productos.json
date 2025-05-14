@@ -2,33 +2,55 @@
   {
     "id": 1,
     "nombre": "Nuevo nombre del producto",
-    "descripcion": "Remera de algod\u00f3n 100% con corte amplio",
+    "descripcion": "Remera de algodón 100% con corte amplio",
     "precio": "15000",
     "stock": 20,
-    "categoria": "Indumentaria"
+    "categoria": "Indumentaria",
+    "talle": "Único"
   },
   {
     "id": 2,
-    "nombre": "Remera Oversize Talle L",
-    "descripcion": "Remera de algod\u00f3n 100% con corte amplio",
+    "nombre": "Remera Oversize",
+    "descripcion": "Remera de algodón 100% con corte amplio",
     "precio": 32000,
     "stock": 12,
-    "categoria": "Indumentaria"
+    "categoria": "Indumentaria",
+    "talle": "L"
   },
   {
     "id": 3,
-    "nombre": "Buzo 'Basics' Oversize Talle M",
-    "descripcion": "Remera de algod\u00f3n 100% con corte amplio",
+    "nombre": "Buzo 'Basics' Oversize",
+    "descripcion": "Remera de algodón 100% con corte amplio",
     "precio": 65000,
     "stock": 8,
-    "categoria": "Indumentaria"
+    "categoria": "Indumentaria",
+    "talle": "M"
   },
   {
     "id": 4,
-    "nombre": "Buzo 'Basics' Oversize Talle L",
-    "descripcion": "Remera de algod\u00f3n 100% con corte amplio",
+    "nombre": "Buzo 'Basics' Oversize",
+    "descripcion": "Remera de algodón 100% con corte amplio",
     "precio": 65000,
     "stock": 8,
-    "categoria": "Indumentaria"
+    "categoria": "Indumentaria",
+    "talle": "L"
+  },
+  {
+    "id": 5,
+    "nombre": "Buzo 'Basics' Oversize",
+    "descripcion": "Remera de algodón 100% con corte amplio",
+    "precio": 65000,
+    "stock": 8,
+    "categoria": "Indumentaria",
+    "talle": "XL"
+  },
+  {
+    "id": 6,
+    "nombre": "Buzo 'Basics' Oversize",
+    "descripcion": "Remera de algodón 100% con corte amplio",
+    "precio": 65000,
+    "stock": 8,
+    "categoria": "Indumentaria",
+    "talle": "XL"
   }
 ]
