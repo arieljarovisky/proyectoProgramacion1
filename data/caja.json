@@ -1,23 +1,23 @@
 {
-  "saldo": 100,
+  "saldo": 227100,
   "movimientos": [
     {
       "tipo": "ingreso",
-      "monto": 100,
-      "descripcion": "Venta",
-      "fecha": "2025-04-26 13:56:24"
+      "monto": 32000,
+      "descripcion": "Venta #36",
+      "fecha": "2025-05-14 17:05:09"
     },
     {
       "tipo": "ingreso",
-      "monto": 300,
-      "descripcion": "Venta",
-      "fecha": "2025-04-26 13:57:15"
+      "monto": 65000,
+      "descripcion": "Venta #37",
+      "fecha": "2025-05-14 17:05:55"
     },
     {
-      "tipo": "egreso",
-      "monto": 300,
-      "descripcion": "compra",
-      "fecha": "2025-04-26 13:57:50"
+      "tipo": "ingreso",
+      "monto": 130000,
+      "descripcion": "Venta #38",
+      "fecha": "2025-05-14 17:08:44"
     }
   ]
 }

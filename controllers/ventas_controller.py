@@ -3,6 +3,8 @@ import json
 import os
 from datetime import datetime
 from controllers.productos_controller import cargar_productos, guardar_productos
+from controllers.caja_controller import cargar_caja, guardar_caja
+
 
 VENTAS_FILE = "data/ventas.json"
 
@@ -54,6 +56,16 @@ def registrar_venta():
 
     ventas.append(venta)
     guardar_ventas(ventas)
+    caja = cargar_caja()
+    ingreso = {
+    "tipo": "ingreso",
+    "monto": data["total"],
+    "descripcion": f"Venta #{venta['id']}",
+    "fecha": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+    }
+    caja["saldo"] += ingreso["monto"]
+    caja["movimientos"].append(ingreso)
+    guardar_caja(caja)
 
     return (
         jsonify({
