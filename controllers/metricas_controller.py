@@ -2,9 +2,12 @@ from flask import jsonify
 from collections import defaultdict
 from datetime import datetime
 from controllers.ventas_controller import cargar_ventas
+from controllers.pagos_controller import cargar_pagos
 
 def obtener_metricas():
     ventas = cargar_ventas()
+    pagos = cargar_pagos()
+    total_pagos = sum(p.get('monto', 0) for p in pagos)
 
     total_ventas = len(ventas)
     total_items = 0
@@ -32,7 +35,8 @@ def obtener_metricas():
             "nombre": producto_mas_vendido[0],
             "cantidad": producto_mas_vendido[1]
         },
-        "ventas_por_dia": dict(ventas_por_dia)
+        "ventas_por_dia": dict(ventas_por_dia),
+        "total_pagos": total_pagos
     }
 
     return jsonify(metricas), 200
