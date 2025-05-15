@@ -7,9 +7,10 @@ from controllers.pagos_controller import cargar_pagos
 def obtener_metricas():
     ventas = cargar_ventas()
     pagos = cargar_pagos()
-    total_pagos = sum(p.get('monto', 0) for p in pagos)
-
+    total_egresos = sum(e.get('monto', 0) for e in pagos)
+    total_ingresos = sum(v.get('total', 0) for v in ventas)
     total_ventas = len(ventas)
+    total_pagos = len(pagos)
     total_items = 0
     producto_contador = defaultdict(int)
     ventas_por_dia = defaultdict(int)
@@ -36,7 +37,9 @@ def obtener_metricas():
             "cantidad": producto_mas_vendido[1]
         },
         "ventas_por_dia": dict(ventas_por_dia),
-        "total_pagos": total_pagos
+        "total_pagos": total_pagos,
+        "total_egresos": total_egresos,
+        "total_ingresos": total_ingresos
     }
 
     return jsonify(metricas), 200
