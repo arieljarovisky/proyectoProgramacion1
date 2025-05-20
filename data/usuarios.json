@@ -1,5 +1,7 @@
 [
   [1, "juan", "juan@example.com", "1234"],
   [2, "sofia", "sofia@example.com", "abcd"],
-  [3, "mario", "mario@example.com", "password"]
+  [3, "mario", "mario@example.com", "password"],
+  [4, "nacho", "nacho@example.com", "123456789"]
 ]
+
