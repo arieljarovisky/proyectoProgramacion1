@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "fecha": "2025-05-14",
+    "descripcion": "Pago de proveedor",
+    "monto": 3500
+  },
+  {
+    "id": "2",
+    "fecha": "2025-05-14",
+    "descripcion": "Pago alquiler",
+    "monto": 1350000
+  },
+  {
+    "id": "3",
+    "fecha": "2025-05-14",
+    "descripcion": "Pago sueldo",
+    "monto": 800000
+  }
+]
