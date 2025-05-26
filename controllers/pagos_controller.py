@@ -24,19 +24,33 @@ def obtener_pagos():
 
 def registrar_pago():
     data = request.get_json()
-    if not data or 'monto' not in data or 'descripcion' not in data:
+    campos_requeridos = ['destinatario', 'concepto', 'descripcion', 'monto', 'metodo']
+
+    # Validar todos los campos requeridos
+    if not data or not all(campo in data and data[campo] for campo in campos_requeridos):
         return jsonify({'error': 'Faltan campos requeridos'}), 400
-    
+
+    # Validar que monto sea un número positivo
+    try:
+        monto = float(data['monto'])
+        if monto <= 0:
+            return jsonify({'error': 'El monto debe ser mayor a cero'}), 400
+    except Exception:
+        return jsonify({'error': 'El monto no es válido'}), 400
+
+    pagos = cargar_pagos()
     nuevo_pago = {
-        'id': str(len(cargar_pagos()) +1),
-        'fecha': data.get('fecha') or request.headers.get('X-Date') or '2025-05-14',
+        'id': str(len(pagos) + 1),
+        'fecha': data.get('fecha') or request.headers.get('X-Date') or datetime.now().isoformat(),
+        'destinatario': data['destinatario'],
+        'concepto': data['concepto'],
         'descripcion': data['descripcion'],
-        'monto': data['monto']
+        'monto': monto,
+        'metodo': data['metodo']
     }
-    
-    pagos =cargar_pagos()
+
     pagos.append(nuevo_pago)
     guardar_pagos(pagos)
-    
-    return jsonify({'message': 'Pago registrado correctamente'}), 201   
+
+    return jsonify({'message': 'Pago registrado correctamente'}), 201
 
