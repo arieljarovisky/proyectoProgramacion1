@@ -16,5 +16,14 @@
     "fecha": "2025-05-14",
     "descripcion": "Pago sueldo",
     "monto": 800000
+  },
+  {
+    "id": "4",
+    "fecha": "2025-05-27",
+    "destinatario": "Proveedor X",
+    "concepto": "proveedor",
+    "descripcion": "Compra de materiales",
+    "monto": 52000.0,
+    "metodo": "transferencia"
   }
 ]
