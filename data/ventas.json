@@ -585,5 +585,46 @@
     ],
     "total": 65000,
     "fecha": "2025-05-26 01:39:48"
+  },
+  {
+    "id": 42,
+    "items": [
+      {
+        "id": 6,
+        "nombre": "Buzo 'Basics' Oversize",
+        "cantidad": 1
+      }
+    ],
+    "total": 65000,
+    "fecha": "2025-05-27 16:21:43"
+  },
+  {
+    "id": 43,
+    "items": [
+      {
+        "id": 3,
+        "nombre": "Buzo 'Basics' Oversize",
+        "cantidad": 3
+      },
+      {
+        "id": 4,
+        "nombre": "Buzo 'Basics' Oversize",
+        "cantidad": 3
+      }
+    ],
+    "total": 390000,
+    "fecha": "2025-05-27 16:47:32"
+  },
+  {
+    "id": 44,
+    "items": [
+      {
+        "id": 1,
+        "nombre": "Nuevo nombre del producto",
+        "cantidad": 4
+      }
+    ],
+    "total": 60000,
+    "fecha": "2025-06-02 21:44:25"
   }
 ]

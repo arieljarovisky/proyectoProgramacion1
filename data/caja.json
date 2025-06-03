@@ -1,5 +1,5 @@
 {
-  "saldo": 598100,
+  "saldo": 1113100,
   "movimientos": [
     {
       "tipo": "ingreso",
@@ -36,6 +36,24 @@
       "monto": 65000,
       "descripcion": "Venta #41",
       "fecha": "2025-05-26 01:39:48"
+    },
+    {
+      "tipo": "ingreso",
+      "monto": 65000,
+      "descripcion": "Venta #42",
+      "fecha": "2025-05-27 16:21:43"
+    },
+    {
+      "tipo": "ingreso",
+      "monto": 390000,
+      "descripcion": "Venta #43",
+      "fecha": "2025-05-27 16:47:32"
+    },
+    {
+      "tipo": "ingreso",
+      "monto": 60000,
+      "descripcion": "Venta #44",
+      "fecha": "2025-06-02 21:44:25"
     }
   ]
 }
