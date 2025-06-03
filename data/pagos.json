@@ -25,5 +25,14 @@
     "descripcion": "Compra de materiales",
     "monto": 52000.0,
     "metodo": "transferencia"
+  },
+  {
+    "id": "5",
+    "fecha": "2025-04-21T00:00:00.000Z",
+    "destinatario": "checo",
+    "concepto": "proveedor",
+    "descripcion": "nmbm",
+    "monto": 30000.0,
+    "metodo": "transferencia"
   }
 ]

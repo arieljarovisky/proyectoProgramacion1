@@ -1,7 +1,32 @@
-[
-  [1, "juan", "juan@example.com", "1234"],
-  [2, "sofia", "sofia@example.com", "abcd"],
-  [3, "mario", "mario@example.com", "password"],
-  [4, "nacho", "nacho@example.com", "123456789"]
-]
-
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nombre": "juan",
+      "email": "juan@example.com",
+      "password": "1234",
+      "rol": "admin"
+    },
+    {
+      "id": 2,
+      "nombre": "sofia",
+      "email": "sofia@example.com",
+      "password": "abcd",
+      "rol": "empleado"
+    },
+    {
+      "id": 3,
+      "nombre": "mario",
+      "email": "mario@example.com",
+      "password": "password",
+      "rol": "empleado"
+    },
+    {
+      "id": 4,
+      "nombre": "nacho",
+      "email": "nacho@example.com",
+      "password": "123456789",
+      "rol": "empleado"
+    }
+  ]
+}
