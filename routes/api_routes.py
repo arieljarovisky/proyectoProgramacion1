@@ -61,6 +61,8 @@ caja_bp.route("/ingreso", methods=["POST"])(registrar_ingreso)
 caja_bp.route("/egreso", methods=["POST"])(registrar_egreso)
 
 
+
+
 # Rutas para calculadora
 # Ruta para calcular el precio      
 calculadora_bp.route("/calcular", methods=["POST"])(calcular_precio)
@@ -68,7 +70,7 @@ calculadora_bp.route("/calcular", methods=["POST"])(calcular_precio)
 
 #Rutas para pagos
 #Ruta para obtener todos los pagos
-pagos_bp.route('', methods= ['GET'])(obtener_pagos)
-#Ruta para registrar un nuevo pago
-pagos_bp.route('', methods= ['POST'])(registrar_pago)
+pagos_bp = Blueprint('pagos', __name__, url_prefix='/api/pagos')
+pagos_bp.route('', methods=['POST'])(registrar_egreso)
+
 

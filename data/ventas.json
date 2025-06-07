@@ -1,429 +1,6 @@
 [
   {
-    "id": 1,
-    "items": [
-      {
-        "nombre": "Mouse",
-        "cantidad": 2,
-        "precio": 1500
-      },
-      {
-        "nombre": "Teclado",
-        "cantidad": 1,
-        "precio": 3000
-      }
-    ],
-    "total": 6000,
-    "fecha": "2025-04-26 00:23:57"
-  },
-  {
-    "id": 2,
-    "items": [
-      {
-        "nombre": "Mouse",
-        "cantidad": 2,
-        "precio": 1500
-      }
-    ],
-    "total": 6000,
-    "fecha": "2025-04-26 00:24:24"
-  },
-  {
-    "id": 3,
-    "items": [
-      {
-        "id": 1,
-        "nombre": "Nuevo nombre del producto",
-        "cantidad": 2
-      },
-      {
-        "id": 1,
-        "nombre": "Nuevo nombre del producto",
-        "cantidad": 5
-      },
-      {
-        "id": 3,
-        "nombre": "Buzo 'Basics' Oversize Talle M",
-        "cantidad": 8
-      }
-    ],
-    "total": 625000,
-    "fecha": "2025-04-27 20:53:14"
-  },
-  {
-    "id": 4,
-    "items": [
-      {
-        "id": 1,
-        "nombre": "Nuevo nombre del producto",
-        "cantidad": 2
-      }
-    ],
-    "total": 30000,
-    "fecha": "2025-04-27 23:22:42"
-  },
-  {
-    "id": 5,
-    "items": [
-      {
-        "id": 2,
-        "nombre": "Remera Oversize Talle L",
-        "cantidad": 10
-      }
-    ],
-    "total": 320000,
-    "fecha": "2025-04-28 15:31:13"
-  },
-  {
-    "id": 6,
-    "items": [
-      {
-        "id": 1,
-        "nombre": "Nuevo nombre del producto",
-        "cantidad": 2
-      },
-      {
-        "id": 2,
-        "nombre": "Remera Oversize Talle L",
-        "cantidad": 2
-      }
-    ],
-    "total": 94000,
-    "fecha": "2025-05-12 21:05:03"
-  },
-  {
-    "id": 7,
-    "items": [
-      {
-        "id": 1,
-        "nombre": "Nuevo nombre del producto",
-        "cantidad": 1
-      },
-      {
-        "id": 2,
-        "nombre": "Remera Oversize Talle L",
-        "cantidad": 1
-      },
-      {
-        "id": 3,
-        "nombre": "Buzo 'Basics' Oversize Talle M",
-        "cantidad": 1
-      },
-      {
-        "id": 4,
-        "nombre": "Buzo 'Basics' Oversize Talle L",
-        "cantidad": 1
-      }
-    ],
-    "total": 177000,
-    "fecha": "2025-05-13 17:16:12"
-  },
-  {
-    "id": 8,
-    "items": [
-      {
-        "id": 1,
-        "nombre": "Nuevo nombre del producto",
-        "cantidad": 2
-      }
-    ],
-    "total": 30000,
-    "fecha": "2025-05-13 17:19:02"
-  },
-  {
-    "id": 9,
-    "items": [
-      {
-        "id": 1,
-        "nombre": "Nuevo nombre del producto",
-        "cantidad": 1
-      }
-    ],
-    "total": 15000,
-    "fecha": "2025-05-13 17:21:20"
-  },
-  {
-    "id": 10,
-    "items": [
-      {
-        "id": 1,
-        "nombre": "Nuevo nombre del producto",
-        "cantidad": 1
-      }
-    ],
-    "total": 15000,
-    "fecha": "2025-05-13 17:21:21"
-  },
-  {
-    "id": 11,
-    "items": [
-      {
-        "id": 1,
-        "nombre": "Nuevo nombre del producto",
-        "cantidad": 1
-      }
-    ],
-    "total": 15000,
-    "fecha": "2025-05-13 17:21:22"
-  },
-  {
-    "id": 12,
-    "items": [
-      {
-        "id": 1,
-        "nombre": "Nuevo nombre del producto",
-        "cantidad": 6
-      },
-      {
-        "id": 2,
-        "nombre": "Remera Oversize",
-        "cantidad": 2
-      },
-      {
-        "id": 3,
-        "nombre": "Buzo 'Basics' Oversize",
-        "cantidad": 2
-      },
-      {
-        "id": 4,
-        "nombre": "Buzo 'Basics' Oversize",
-        "cantidad": 2
-      }
-    ],
-    "total": 414000,
-    "fecha": "2025-05-13 17:24:51"
-  },
-  {
-    "id": 13,
-    "items": [
-      {
-        "id": 1,
-        "nombre": "Nuevo nombre del producto",
-        "cantidad": 2
-      }
-    ],
-    "total": 30000,
-    "fecha": "2025-05-13 17:24:58"
-  },
-  {
-    "id": 14,
-    "items": [
-      {
-        "id": 2,
-        "nombre": "Remera Oversize",
-        "cantidad": 1
-      },
-      {
-        "id": 1,
-        "nombre": "Nuevo nombre del producto",
-        "cantidad": 1
-      }
-    ],
-    "total": 47000,
-    "fecha": "2025-05-13 18:01:07"
-  },
-  {
-    "id": 15,
-    "items": [
-      {
-        "id": 2,
-        "nombre": "Remera Oversize",
-        "cantidad": 2
-      },
-      {
-        "id": 1,
-        "nombre": "Nuevo nombre del producto",
-        "cantidad": 2
-      }
-    ],
-    "total": 94000,
-    "fecha": "2025-05-13 18:01:17"
-  },
-  {
-    "id": 16,
-    "items": [
-      {
-        "id": 2,
-        "nombre": "Remera Oversize",
-        "cantidad": 4
-      }
-    ],
-    "total": 128000,
-    "fecha": "2025-05-13 18:01:58"
-  },
-  {
-    "id": 17,
-    "items": [
-      {
-        "id": 1,
-        "nombre": "Nuevo nombre del producto",
-        "cantidad": 2
-      }
-    ],
-    "total": 30000,
-    "fecha": "2025-05-13 18:03:01"
-  },
-  {
-    "id": 18,
-    "items": [
-      {
-        "id": 1,
-        "nombre": "Nuevo nombre del producto",
-        "cantidad": 4
-      }
-    ],
-    "total": 60000,
-    "fecha": "2025-05-13 18:03:36"
-  },
-  {
-    "id": 19,
-    "items": [
-      {
-        "id": 2,
-        "nombre": "Remera Oversize",
-        "cantidad": 1
-      },
-      {
-        "id": 1,
-        "nombre": "Nuevo nombre del producto",
-        "cantidad": 1
-      },
-      {
-        "id": 4,
-        "nombre": "Buzo 'Basics' Oversize",
-        "cantidad": 1
-      }
-    ],
-    "total": 112000,
-    "fecha": "2025-05-13 18:20:47"
-  },
-  {
-    "id": 20,
-    "items": [
-      {
-        "id": 1,
-        "nombre": "Nuevo nombre del producto",
-        "cantidad": 6
-      }
-    ],
-    "total": 90000,
-    "fecha": "2025-05-14 16:27:08"
-  },
-  {
-    "id": 21,
-    "items": [
-      {
-        "id": 1,
-        "nombre": "Nuevo nombre del producto",
-        "cantidad": 1
-      },
-      {
-        "id": 2,
-        "nombre": "Remera Oversize",
-        "cantidad": 1
-      }
-    ],
-    "total": 47000,
-    "fecha": "2025-05-14 16:39:55"
-  },
-  {
-    "id": 22,
-    "items": [
-      {
-        "id": 1,
-        "nombre": "Nuevo nombre del producto",
-        "cantidad": 1
-      }
-    ],
-    "total": 15000,
-    "fecha": "2025-05-14 16:40:10"
-  },
-  {
-    "id": 23,
-    "items": [
-      {
-        "id": 5,
-        "nombre": "Buzo 'Basics' Oversize",
-        "cantidad": 2
-      }
-    ],
-    "total": 130000,
-    "fecha": "2025-05-14 16:45:52"
-  },
-  {
-    "id": 24,
-    "items": [
-      {
-        "id": 5,
-        "nombre": "Buzo 'Basics' Oversize",
-        "cantidad": 1
-      }
-    ],
-    "total": 65000,
-    "fecha": "2025-05-14 16:46:19"
-  },
-  {
-    "id": 25,
-    "items": [
-      {
-        "id": 5,
-        "nombre": "Buzo 'Basics' Oversize",
-        "cantidad": 1
-      }
-    ],
-    "total": 65000,
-    "fecha": "2025-05-14 16:47:21"
-  },
-  {
-    "id": 26,
-    "items": [
-      {
-        "id": 5,
-        "nombre": "Buzo 'Basics' Oversize",
-        "cantidad": 1
-      }
-    ],
-    "total": 65000,
-    "fecha": "2025-05-14 16:47:30"
-  },
-  {
-    "id": 27,
-    "items": [
-      {
-        "id": 5,
-        "nombre": "Buzo 'Basics' Oversize",
-        "cantidad": 1
-      }
-    ],
-    "total": 65000,
-    "fecha": "2025-05-14 16:47:35"
-  },
-  {
-    "id": 28,
-    "items": [
-      {
-        "id": 4,
-        "nombre": "Buzo 'Basics' Oversize",
-        "cantidad": 1
-      }
-    ],
-    "total": 65000,
-    "fecha": "2025-05-14 16:48:14"
-  },
-  {
-    "id": 29,
-    "items": [
-      {
-        "id": 4,
-        "nombre": "Buzo 'Basics' Oversize",
-        "cantidad": 1
-      }
-    ],
-    "total": 65000,
-    "fecha": "2025-05-14 16:48:16"
-  },
-  {
-    "id": 30,
+    "id": "26f448fc-1c41-48cf-a449-a09c052ba5f1",
     "items": [
       {
         "id": 3,
@@ -432,22 +9,10 @@
       }
     ],
     "total": 65000,
-    "fecha": "2025-05-14 16:48:46"
+    "fecha": "2025-06-07 01:57:29"
   },
   {
-    "id": 31,
-    "items": [
-      {
-        "id": 1,
-        "nombre": "Nuevo nombre del producto",
-        "cantidad": 1
-      }
-    ],
-    "total": 15000,
-    "fecha": "2025-05-14 16:48:59"
-  },
-  {
-    "id": 32,
+    "id": "d662b5f3-e186-4510-a1e0-d0ba50219a89",
     "items": [
       {
         "id": 2,
@@ -456,10 +21,10 @@
       }
     ],
     "total": 32000,
-    "fecha": "2025-05-14 16:50:38"
+    "fecha": "2025-06-07 02:02:24"
   },
   {
-    "id": 33,
+    "id": "ddb45a5c-08df-4bf8-ac83-e5d9f2b8009e",
     "items": [
       {
         "id": 2,
@@ -468,163 +33,78 @@
       }
     ],
     "total": 32000,
-    "fecha": "2025-05-14 16:51:25"
+    "fecha": "2025-06-02 02:04:02"
   },
   {
-    "id": 34,
-    "items": [
-      {
-        "id": 2,
-        "nombre": "Remera Oversize",
-        "cantidad": 1
-      }
-    ],
-    "total": 32000,
-    "fecha": "2025-05-14 16:55:51"
-  },
-  {
-    "id": 35,
-    "items": [
-      {
-        "id": 3,
-        "nombre": "Buzo 'Basics' Oversize",
-        "cantidad": 1
-      }
-    ],
-    "total": 65000,
-    "fecha": "2025-05-14 16:55:53"
-  },
-  {
-    "id": 36,
-    "items": [
-      {
-        "id": 2,
-        "nombre": "Remera Oversize",
-        "cantidad": 1
-      }
-    ],
-    "total": 32000,
-    "fecha": "2025-05-14 17:05:09"
-  },
-  {
-    "id": 37,
-    "items": [
-      {
-        "id": 4,
-        "nombre": "Buzo 'Basics' Oversize",
-        "cantidad": 1
-      }
-    ],
-    "total": 65000,
-    "fecha": "2025-05-14 17:05:55"
-  },
-  {
-    "id": 38,
+    "id": "fe29a3f8-6c0b-4cfa-acaf-c85e21bc6f46",
     "items": [
       {
         "id": 5,
         "nombre": "Buzo 'Basics' Oversize",
-        "cantidad": 2
+        "cantidad": 1
       }
     ],
-    "total": 130000,
-    "fecha": "2025-05-14 17:08:44"
+    "total": 65000,
+    "fecha": "2025-06-07 02:04:11"
   },
   {
-    "id": 39,
+    "id": "986e6715-46e1-43a3-8809-7b855a7096c5",
     "items": [
       {
         "id": 2,
         "nombre": "Remera Oversize",
         "cantidad": 1
-      },
+      }
+    ],
+    "total": 32000,
+    "fecha": "2025-06-07 02:06:33"
+  },
+  {
+    "id": "babd293d-1c64-4a46-8452-216f8822b616",
+    "items": [
       {
-        "id": 3,
-        "nombre": "Buzo 'Basics' Oversize",
-        "cantidad": 1
-      },
-      {
-        "id": 1,
-        "nombre": "Nuevo nombre del producto",
-        "cantidad": 1
-      },
-      {
-        "id": 4,
+        "id": 5,
         "nombre": "Buzo 'Basics' Oversize",
         "cantidad": 1
       }
     ],
-    "total": 177000,
-    "fecha": "2025-05-14 20:57:07"
+    "total": 65000,
+    "fecha": "2025-06-07 02:06:53"
   },
   {
-    "id": 40,
+    "id": "885253d6-c741-4f5e-ade7-8fa61964710b",
     "items": [
       {
-        "id": 2,
-        "nombre": "Remera Oversize",
+        "id": 5,
+        "nombre": "Buzo 'Basics' Oversize",
+        "cantidad": 1
+      }
+    ],
+    "total": 65000,
+    "fecha": "2025-06-07 02:07:08"
+  },
+  {
+    "id": "7ac35c09-e3d5-41f4-bd16-8e4ae32f81b0",
+    "items": [
+      {
+        "id": 3,
+        "nombre": "Buzo 'Basics' Oversize",
+        "cantidad": 1
+      }
+    ],
+    "total": 65000,
+    "fecha": "2025-06-07 02:10:04"
+  },
+  {
+    "id": "96c48436-4aff-401c-972f-4b6d680ef0f0",
+    "items": [
+      {
+        "id": 1,
+        "nombre": "Nuevo nombre del producto",
         "cantidad": 2
-      },
-      {
-        "id": 3,
-        "nombre": "Buzo 'Basics' Oversize",
-        "cantidad": 1
       }
     ],
-    "total": 129000,
-    "fecha": "2025-05-14 21:36:30"
-  },
-  {
-    "id": 41,
-    "items": [
-      {
-        "id": 4,
-        "nombre": "Buzo 'Basics' Oversize",
-        "cantidad": 1
-      }
-    ],
-    "total": 65000,
-    "fecha": "2025-05-26 01:39:48"
-  },
-  {
-    "id": 42,
-    "items": [
-      {
-        "id": 6,
-        "nombre": "Buzo 'Basics' Oversize",
-        "cantidad": 1
-      }
-    ],
-    "total": 65000,
-    "fecha": "2025-05-27 16:21:43"
-  },
-  {
-    "id": 43,
-    "items": [
-      {
-        "id": 3,
-        "nombre": "Buzo 'Basics' Oversize",
-        "cantidad": 3
-      },
-      {
-        "id": 4,
-        "nombre": "Buzo 'Basics' Oversize",
-        "cantidad": 3
-      }
-    ],
-    "total": 390000,
-    "fecha": "2025-05-27 16:47:32"
-  },
-  {
-    "id": 44,
-    "items": [
-      {
-        "id": 1,
-        "nombre": "Nuevo nombre del producto",
-        "cantidad": 4
-      }
-    ],
-    "total": 60000,
-    "fecha": "2025-06-02 21:44:25"
+    "total": 30000,
+    "fecha": "2025-06-07 02:29:50"
   }
 ]

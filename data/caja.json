@@ -1,59 +1,101 @@
 {
-  "saldo": 1113100,
+  "saldo": 30000.0,
   "movimientos": [
     {
       "tipo": "ingreso",
       "monto": 32000,
-      "descripcion": "Venta #36",
-      "fecha": "2025-05-14 17:05:09"
+      "descripcion": "Venta #3",
+      "fecha": "2025-06-07 02:02:24"
+    },
+    {
+      "id": "c42c3389-d262-4671-acfe-427dad7cff79",
+      "tipo": "egreso",
+      "monto": 12312.0,
+      "descripcion": "dasasdadsdas",
+      "fecha": "2025-06-07 02:03:23",
+      "detalles": {
+        "destinatario": "dasadsdasda",
+        "concepto": "alquiler",
+        "metodo": "efectivo"
+      }
+    },
+    {
+      "tipo": "ingreso",
+      "monto": 32000,
+      "descripcion": "Venta #4",
+      "fecha": "2025-06-07 02:04:02"
     },
     {
       "tipo": "ingreso",
       "monto": 65000,
-      "descripcion": "Venta #37",
-      "fecha": "2025-05-14 17:05:55"
+      "descripcion": "Venta #5",
+      "fecha": "2025-06-07 02:04:11"
     },
     {
       "tipo": "ingreso",
-      "monto": 130000,
-      "descripcion": "Venta #38",
-      "fecha": "2025-05-14 17:08:44"
-    },
-    {
-      "tipo": "ingreso",
-      "monto": 177000,
-      "descripcion": "Venta #39",
-      "fecha": "2025-05-14 20:57:07"
-    },
-    {
-      "tipo": "ingreso",
-      "monto": 129000,
-      "descripcion": "Venta #40",
-      "fecha": "2025-05-14 21:36:30"
+      "monto": 32000,
+      "descripcion": "Venta #6",
+      "fecha": "2025-06-07 02:06:33"
     },
     {
       "tipo": "ingreso",
       "monto": 65000,
-      "descripcion": "Venta #41",
-      "fecha": "2025-05-26 01:39:48"
+      "descripcion": "Venta #7",
+      "fecha": "2025-06-07 02:06:53"
     },
     {
       "tipo": "ingreso",
       "monto": 65000,
-      "descripcion": "Venta #42",
-      "fecha": "2025-05-27 16:21:43"
+      "descripcion": "Venta #8",
+      "fecha": "2025-06-07 02:07:08"
     },
     {
       "tipo": "ingreso",
-      "monto": 390000,
-      "descripcion": "Venta #43",
-      "fecha": "2025-05-27 16:47:32"
+      "monto": 65000,
+      "descripcion": "Venta #9",
+      "fecha": "2025-06-07 02:10:04"
+    },
+    {
+      "id": "3b18c805-bdb2-48cd-982a-7fdc294edaa3",
+      "tipo": "egreso",
+      "monto": 10000.0,
+      "descripcion": "asddasads",
+      "fecha": "2025-06-07 02:15:33",
+      "detalles": {
+        "destinatario": "adasd",
+        "concepto": "alquiler",
+        "metodo": "efectivo"
+      }
+    },
+    {
+      "id": "b08aafdb-3db6-49ca-904b-ea030ca69f62",
+      "tipo": "egreso",
+      "monto": 40000.0,
+      "descripcion": "saddasds",
+      "fecha": "2025-06-07 02:16:01",
+      "detalles": {
+        "destinatario": "dasadsdasda",
+        "concepto": "alquiler",
+        "metodo": "transferencia"
+      }
+    },
+    {
+      "id": "120c061b-81e5-4623-9877-cf470ccf601e",
+      "tipo": "egreso",
+      "monto": 293688.0,
+      "descripcion": "dasdasdsa",
+      "fecha": "2025-06-07 02:19:34",
+      "detalles": {
+        "destinatario": "adasd",
+        "concepto": "alquiler",
+        "metodo": "efectivo"
+      }
     },
     {
       "tipo": "ingreso",
-      "monto": 60000,
-      "descripcion": "Venta #44",
-      "fecha": "2025-06-02 21:44:25"
+      "monto": 30000,
+      "descripcion": "Venta #10",
+      "fecha": "2025-06-07 02:29:50"
     }
   ]
 }

@@ -4,7 +4,7 @@ import os
 from datetime import datetime
 from controllers.productos_controller import cargar_productos, guardar_productos
 from controllers.caja_controller import cargar_caja, guardar_caja
-
+import uuid
 
 VENTAS_FILE = "data/ventas.json"
 
@@ -48,7 +48,7 @@ def registrar_venta():
     ventas = cargar_ventas()
 
     venta = {
-        "id": len(ventas) + 1,
+        "id": str(uuid.uuid4()),
         "items": data["items"],
         "total": data["total"],
         "fecha": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
@@ -60,7 +60,7 @@ def registrar_venta():
     ingreso = {
     "tipo": "ingreso",
     "monto": data["total"],
-    "descripcion": f"Venta #{venta['id']}",
+    "descripcion": f"Venta #{len(ventas) + 1}",
     "fecha": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
     }
     caja["saldo"] += ingreso["monto"]
