@@ -1,49 +1,17 @@
 from flask import request, jsonify
-import json
-import os
+import json, os, uuid
 from datetime import datetime
 from controllers.caja_controller import cargar_caja, guardar_caja
-import uuid
-
-VENTAS_FILE = "data/ventas.json"
-CAJA_FILE = "data/caja.json"
-PRODUCTOS_FILE = "data/productos.json"
-
-def cargar_productos():
-    if not os.path.exists(PRODUCTOS_FILE):
-        with open(PRODUCTOS_FILE, "w") as f:
-            json.dump([], f)
-        return []
-    with open(PRODUCTOS_FILE, "r", encoding="utf-8") as f:
-        return json.load(f)
-# Cargar ventas desde el archivo JSON
-def cargar_ventas():
-    if not os.path.exists(VENTAS_FILE):
-        with open(VENTAS_FILE, "w") as f:
-            json.dump([], f)
-        return []
-
-    with open(VENTAS_FILE, "r") as f:
-        return json.load(f)
-
-
-# Guardar ventas en el archivo JSON
-def guardar_ventas(ventas):
-    with open(VENTAS_FILE, "w") as f:
-        json.dump(ventas, f, indent=2)
-
-# Registrar una nueva venta
-from flask import request, jsonify
-from datetime import datetime
-import json, os, uuid
+from controllers.productos_controller import cargar_productos, guardar_productos
 
 VENTAS_FILE = "data/ventas.json"
 CAJA_FILE = "data/caja.json"
 
 def cargar_ventas():
     if not os.path.exists(VENTAS_FILE):
-        with open(VENTAS_FILE, "w") as f:
+        with open(VENTAS_FILE, "w", encoding="utf-8") as f:
             json.dump([], f)
+
     with open(VENTAS_FILE, "r", encoding="utf-8") as f:
         return json.load(f)
 
@@ -51,27 +19,18 @@ def guardar_ventas(ventas):
     with open(VENTAS_FILE, "w", encoding="utf-8") as f:
         json.dump(ventas, f, indent=2, ensure_ascii=False)
 
-def cargar_caja():
-    if not os.path.exists(CAJA_FILE):
-        with open(CAJA_FILE, "w") as f:
-            json.dump({"saldo": 0, "movimientos": []}, f)
-    with open(CAJA_FILE, "r", encoding="utf-8") as f:
-        return json.load(f)
-
-def guardar_caja(caja):
-    with open(CAJA_FILE, "w", encoding="utf-8") as f:
-        json.dump(caja, f, indent=2, ensure_ascii=False)
-
 def registrar_venta():
     data = request.get_json()
     if not data or "items" not in data or not isinstance(data["items"], list):
         return jsonify({"error": "Datos inválidos"}), 400
 
+    # Cargamos los productos
     productos = cargar_productos()
     items_detallados = []
 
+    #Validamos y armamos el detalle
     for item in data["items"]:
-        prod = next((p for p in productos if p["id"] == item["id"]), None)
+        prod = next((p for p in productos if str(p["id"]) == str(item["id"])), None)
         if not prod:
             return jsonify({"error": f"Producto con id {item['id']} no encontrado"}), 404
 
@@ -82,6 +41,7 @@ def registrar_venta():
             "precio_unitario": prod["precio"]
         })
 
+    #Calculamos el total y armamos la venta
     total = sum(i["cantidad"] * i["precio_unitario"] for i in items_detallados)
     venta_id = str(uuid.uuid4())
     fecha_actual = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -93,12 +53,12 @@ def registrar_venta():
         "fecha": fecha_actual
     }
 
-    # Guardar la venta
+    # Guardamos la venta
     ventas = cargar_ventas()
     ventas.append(nueva_venta)
     guardar_ventas(ventas)
 
-    # Registrar ingreso en caja con mismo ID
+    # Registramos el ingreso en caja.json
     caja = cargar_caja()
     descripcion = f"Venta #{len([m for m in caja['movimientos'] if m['tipo'] == 'ingreso']) + 1}"
     nuevo_ingreso = {
@@ -112,9 +72,17 @@ def registrar_venta():
     caja["saldo"] += total
     caja["movimientos"].append(nuevo_ingreso)
     guardar_caja(caja)
+    
+    #Actualizamos el stock en productos.json
+    for item in items_detallados:
+        prod = next((p for p in productos if str(p["id"]) == str(item["id"])), None)
+        if prod:
+            prod ["stock"] = max(0, prod.get("stock", 0) - item["cantidad"])
+    
+    guardar_productos(productos)
 
+    #Devolvemos la respuesta al frontend
     return jsonify({"message": "Venta registrada", "venta": nueva_venta}), 201
-
 
 
 # Obtener todas las ventas
@@ -153,4 +121,6 @@ def eliminar_venta(id):
         return jsonify({"error": "Venta no encontrada"}), 404
 
     guardar_ventas(ventas_filtradas)
+    
     return jsonify({"message": "Venta eliminada correctamente"}), 200
+

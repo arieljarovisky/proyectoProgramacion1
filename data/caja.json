@@ -1,5 +1,5 @@
 {
-  "saldo": 195000,
+  "saldo": 307000,
   "movimientos": [
     {
       "id": "0af025cd-d19a-43cc-8a29-d85c40e12ac5",
@@ -8,6 +8,20 @@
       "descripcion": "Venta #1",
       "fecha": "2025-06-13 16:39:29",
       "factura_id": "FAC-2025-06-001"
+    },
+    {
+      "id": "25f8a689-e692-4f4f-bc63-4eb5791fba40",
+      "tipo": "ingreso",
+      "monto": 15000,
+      "descripcion": "Venta #2",
+      "fecha": "2025-06-22 01:04:51"
+    },
+    {
+      "id": "db72d23b-87d1-4216-9a94-30efc831679e",
+      "tipo": "ingreso",
+      "monto": 97000,
+      "descripcion": "Venta #3",
+      "fecha": "2025-06-22 01:05:04"
     }
   ]
 }

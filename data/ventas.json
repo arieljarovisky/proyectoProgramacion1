@@ -23,5 +23,37 @@
     ],
     "total": 195000,
     "fecha": "2025-06-13 16:39:29"
+  },
+  {
+    "id": "25f8a689-e692-4f4f-bc63-4eb5791fba40",
+    "items": [
+      {
+        "id": 1,
+        "nombre": "Nuevo nombre del producto",
+        "cantidad": 1,
+        "precio_unitario": 15000
+      }
+    ],
+    "total": 15000,
+    "fecha": "2025-06-22 01:04:51"
+  },
+  {
+    "id": "db72d23b-87d1-4216-9a94-30efc831679e",
+    "items": [
+      {
+        "id": 3,
+        "nombre": "Buzo 'Basics' Oversize",
+        "cantidad": 1,
+        "precio_unitario": 65000
+      },
+      {
+        "id": 2,
+        "nombre": "Remera Oversize",
+        "cantidad": 1,
+        "precio_unitario": 32000
+      }
+    ],
+    "total": 97000,
+    "fecha": "2025-06-22 01:05:04"
   }
 ]
