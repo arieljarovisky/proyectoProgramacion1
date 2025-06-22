@@ -1,8 +1,20 @@
 from flask import jsonify
 from collections import defaultdict
-from datetime import datetime
+from datetime import datetime, timedelta
 from controllers.ventas_controller import cargar_ventas
 from controllers.caja_controller import cargar_caja
+
+MESES_ES = {
+    1: "enero", 2: "febrero", 3: "marzo", 4: "abril", 5: "mayo", 6: "junio",
+    7: "julio", 8: "agosto", 9: "septiembre", 10: "octubre", 11: "noviembre", 12: "diciembre"
+}
+
+def semana_label(fecha):
+    start_of_week = fecha - timedelta(days=fecha.weekday())  # lunes de esa semana
+    end_of_week = start_of_week + timedelta(days=6)          # domingo de esa semana
+    mes = MESES_ES[start_of_week.month]
+    label = f"{start_of_week.day}-{end_of_week.day} {mes} {end_of_week.year}"
+    return label
 
 def obtener_metricas():
     ventas = cargar_ventas()
@@ -42,7 +54,7 @@ def obtener_metricas():
         fecha = datetime.strptime(venta.get("fecha", "")[:10], "%Y-%m-%d")
         total = venta.get("total", 0)
         fecha_str = fecha.strftime("%Y-%m-%d")
-        semana = f"Semana {fecha.isocalendar().week} - {fecha.year}"
+        semana = semana_label(fecha)
         mes = fecha.strftime("%Y-%m")
         anio = str(fecha.year)
 
@@ -65,7 +77,7 @@ def obtener_metricas():
         fecha = datetime.strptime(pago.get("fecha", "")[:10], "%Y-%m-%d")
         monto = pago.get("monto", 0)
         fecha_str = fecha.strftime("%Y-%m-%d")
-        semana = f"Semana {fecha.isocalendar().week} - {fecha.year}"
+        semana = semana_label(fecha)
         mes = fecha.strftime("%Y-%m")
         anio = str(fecha.year)
 
