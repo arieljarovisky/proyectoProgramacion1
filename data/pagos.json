@@ -16,5 +16,59 @@
     "descripcion": "Pago alquiler de Junio",
     "monto": 500000.0,
     "metodo": "transferencia"
+  },
+  {
+    "id": "3",
+    "fecha": "2025-03-01 00:00:00",
+    "destinatario": "Textil SA",
+    "concepto": "proveedor",
+    "descripcion": "Compra de mercaderia",
+    "monto": 1250000.0,
+    "metodo": "transferencia"
+  },
+  {
+    "id": "4",
+    "fecha": "2025-03-01 00:00:00",
+    "destinatario": "ABC Inmobiliaria",
+    "concepto": "alquiler",
+    "descripcion": "Alquiler Marzo",
+    "monto": 500000.0,
+    "metodo": "transferencia"
+  },
+  {
+    "id": "5",
+    "fecha": "2025-04-01 00:00:00",
+    "destinatario": "ABC Inmobiliaria",
+    "concepto": "alquiler",
+    "descripcion": "Alquiler Abril",
+    "monto": 500000.0,
+    "metodo": "transferencia"
+  },
+  {
+    "id": "6",
+    "fecha": "2025-05-01 00:00:00",
+    "destinatario": "ABC Inmobiliaria",
+    "concepto": "alquiler",
+    "descripcion": "Alquiler Mayo",
+    "monto": 550000.0,
+    "metodo": "transferencia"
+  },
+  {
+    "id": "7",
+    "fecha": "2025-03-12 00:00:00",
+    "destinatario": "Edenor",
+    "concepto": "servicios",
+    "descripcion": "Luz Marzo-Abril",
+    "monto": 180000.0,
+    "metodo": "efectivo"
+  },
+  {
+    "id": "8",
+    "fecha": "2025-06-11 00:00:00",
+    "destinatario": "Edenor",
+    "concepto": "servicios",
+    "descripcion": "Luz Mayo-Junio",
+    "monto": 210000.0,
+    "metodo": "transferencia"
   }
 ]

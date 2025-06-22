@@ -22,7 +22,7 @@
       }
     ],
     "total": 195000,
-    "fecha": "2025-06-13 16:39:29"
+    "fecha": "2025-03-13 16:39:29"
   },
   {
     "id": "25f8a689-e692-4f4f-bc63-4eb5791fba40",
@@ -35,7 +35,7 @@
       }
     ],
     "total": 15000,
-    "fecha": "2025-06-22 01:04:51"
+    "fecha": "2025-03-15 01:04:51"
   },
   {
     "id": "db72d23b-87d1-4216-9a94-30efc831679e",
@@ -54,12 +54,1052 @@
       }
     ],
     "total": 97000,
-    "fecha": "2025-06-22 01:05:04"
+    "fecha": "2025-03-17 01:05:04"
   },
   {
     "id": "e9cfcee8-2255-476e-b2d8-b8d91a7a8b68",
     "items": [],
     "total": 0,
-    "fecha": "2025-06-22 01:51:32"
+    "fecha": "2025-03-17 01:51:32"
+  },
+  {
+    "id": "5adedd63-5327-46fb-8b1d-4001e9055016",
+    "items": [
+      {
+        "id": 4,
+        "nombre": "Buzo Street",
+        "cantidad": 1,
+        "precio_unitario": 65000
+      },
+      {
+        "id": 8,
+        "nombre": "Pantalón Cargo Tech",
+        "cantidad": 1,
+        "precio_unitario": 42000
+      },
+      {
+        "id": 7,
+        "nombre": "Chaqueta Bomber Urbano",
+        "cantidad": 1,
+        "precio_unitario": 85000
+      }
+    ],
+    "total": 192000,
+    "fecha": "2025-03-17 03:30:57"
+  },
+  {
+    "id": "71227322-e440-45d3-b955-14824d965742",
+    "items": [
+      {
+        "id": 6,
+        "nombre": "Denim Overshirt",
+        "cantidad": 1,
+        "precio_unitario": 70000
+      },
+      {
+        "id": 7,
+        "nombre": "Chaqueta Bomber Urbano",
+        "cantidad": 1,
+        "precio_unitario": 85000
+      }
+    ],
+    "total": 155000,
+    "fecha": "2025-03-21 03:31:00"
+  },
+  {
+    "id": "070461fe-310b-4247-b0be-2fb58e7c37a0",
+    "items": [
+      {
+        "id": 5,
+        "nombre": "Buzo Overshirt Denim",
+        "cantidad": 2,
+        "precio_unitario": 72000
+      }
+    ],
+    "total": 144000,
+    "fecha": "2025-03-22 03:31:02"
+  },
+  {
+    "id": "074d018a-daa5-4d4b-aedb-709d23eaf19b",
+    "items": [
+      {
+        "id": 11,
+        "nombre": "Gorra Snapback",
+        "cantidad": 1,
+        "precio_unitario": 18000
+      },
+      {
+        "id": 10,
+        "nombre": "Sneakers Urban Tech",
+        "cantidad": 1,
+        "precio_unitario": 68000
+      }
+    ],
+    "total": 86000,
+    "fecha": "2025-03-22 03:31:06"
+  },
+  {
+    "id": "bd00080c-ccda-445f-a26f-8830ae73d10a",
+    "items": [
+      {
+        "id": 20,
+        "nombre": "Reloj Smart Strap",
+        "cantidad": 1,
+        "precio_unitario": 95000
+      },
+      {
+        "id": 19,
+        "nombre": "Gafas Urban Aviator",
+        "cantidad": 1,
+        "precio_unitario": 45000
+      },
+      {
+        "id": 18,
+        "nombre": "Beanie Ribbed",
+        "cantidad": 1,
+        "precio_unitario": 18000
+      },
+      {
+        "id": 17,
+        "nombre": "Windbreaker Reflective",
+        "cantidad": 1,
+        "precio_unitario": 60000
+      }
+    ],
+    "total": 218000,
+    "fecha": "2025-03-22 03:31:12"
+  },
+  {
+    "id": "3d0723f0-7533-4896-b8fb-7a35f8b8cf0a",
+    "items": [
+      {
+        "id": 4,
+        "nombre": "Buzo Street",
+        "cantidad": 1,
+        "precio_unitario": 65000
+      }
+    ],
+    "total": 65000,
+    "fecha": "2025-03-23 03:31:14"
+  },
+  {
+    "id": "23b0483e-c14e-47e0-9dda-37e93859a312",
+    "items": [
+      {
+        "id": 4,
+        "nombre": "Buzo Street",
+        "cantidad": 1,
+        "precio_unitario": 65000
+      },
+      {
+        "id": 3,
+        "nombre": "Buzo Skate",
+        "cantidad": 1,
+        "precio_unitario": 65000
+      }
+    ],
+    "total": 130000,
+    "fecha": "2025-03-27 03:31:17"
+  },
+  {
+    "id": "2f9408de-085e-4acf-b706-07bdd2a6d8e6",
+    "items": [
+      {
+        "id": 2,
+        "nombre": "Remera Oversize",
+        "cantidad": 3,
+        "precio_unitario": 32000
+      }
+    ],
+    "total": 96000,
+    "fecha": "2025-03-28 03:31:20"
+  },
+  {
+    "id": "648ead3f-28b5-4c46-8bc0-079e869d1ca0",
+    "items": [
+      {
+        "id": 1,
+        "nombre": "Camiseta Graphic",
+        "cantidad": 1,
+        "precio_unitario": 15000
+      }
+    ],
+    "total": 15000,
+    "fecha": "2025-04-05 03:31:22"
+  },
+  {
+    "id": "a26ca091-0a63-4fac-9278-fb3057fb2fd0",
+    "items": [
+      {
+        "id": 1,
+        "nombre": "Camiseta Graphic",
+        "cantidad": 1,
+        "precio_unitario": 15000
+      }
+    ],
+    "total": 15000,
+    "fecha": "2025-04-05 03:31:23"
+  },
+  {
+    "id": "2425fd3c-d76e-49b5-8eaf-430123e01f5e",
+    "items": [
+      {
+        "id": 1,
+        "nombre": "Camiseta Graphic",
+        "cantidad": 1,
+        "precio_unitario": 15000
+      }
+    ],
+    "total": 15000,
+    "fecha": "2025-04-07 03:31:25"
+  },
+  {
+    "id": "259b7d56-abec-44db-b918-5c9d3b07ef91",
+    "items": [
+      {
+        "id": 5,
+        "nombre": "Buzo Overshirt Denim",
+        "cantidad": 2,
+        "precio_unitario": 72000
+      }
+    ],
+    "total": 144000,
+    "fecha": "2025-04-07 03:31:27"
+  },
+  {
+    "id": "47ca0d05-523b-4b9f-a1ed-57b57572729d",
+    "items": [
+      {
+        "id": 7,
+        "nombre": "Chaqueta Bomber Urbano",
+        "cantidad": 4,
+        "precio_unitario": 85000
+      }
+    ],
+    "total": 340000,
+    "fecha": "2025-04-10 03:31:29"
+  },
+  {
+    "id": "47888ca4-6057-4a68-ac48-29cb32c06d8a",
+    "items": [
+      {
+        "id": 8,
+        "nombre": "Pantalón Cargo Tech",
+        "cantidad": 1,
+        "precio_unitario": 42000
+      }
+    ],
+    "total": 42000,
+    "fecha": "2025-04-11 03:31:32"
+  },
+  {
+    "id": "bf53ed16-3ba4-4053-bd9f-69c619947aef",
+    "items": [
+      {
+        "id": 16,
+        "nombre": "Hoodie Duo Tone",
+        "cantidad": 1,
+        "precio_unitario": 70000
+      },
+      {
+        "id": 15,
+        "nombre": "Medias Logo Urban",
+        "cantidad": 1,
+        "precio_unitario": 12000
+      }
+    ],
+    "total": 82000,
+    "fecha": "2025-04-11 03:31:35"
+  },
+  {
+    "id": "4fbc0a21-8e8d-46b5-80af-6dd61e7051a4",
+    "items": [
+      {
+        "id": 20,
+        "nombre": "Reloj Smart Strap",
+        "cantidad": 1,
+        "precio_unitario": 95000
+      },
+      {
+        "id": 19,
+        "nombre": "Gafas Urban Aviator",
+        "cantidad": 3,
+        "precio_unitario": 45000
+      }
+    ],
+    "total": 230000,
+    "fecha": "2025-04-13 03:31:42"
+  },
+  {
+    "id": "7e6dacd8-4da0-48c5-a4da-e8e079e3ee92",
+    "items": [
+      {
+        "id": 6,
+        "nombre": "Denim Overshirt",
+        "cantidad": 2,
+        "precio_unitario": 70000
+      },
+      {
+        "id": 10,
+        "nombre": "Sneakers Urban Tech",
+        "cantidad": 2,
+        "precio_unitario": 68000
+      },
+      {
+        "id": 9,
+        "nombre": "Camisa Workwear",
+        "cantidad": 6,
+        "precio_unitario": 48000
+      }
+    ],
+    "total": 564000,
+    "fecha": "2025-04-13 03:31:49"
+  },
+  {
+    "id": "650d4326-f9f1-43ca-92ef-750417be5120",
+    "items": [
+      {
+        "id": 13,
+        "nombre": "Mochila Urban Tech",
+        "cantidad": 3,
+        "precio_unitario": 55000
+      }
+    ],
+    "total": 165000,
+    "fecha": "2025-04-13 03:31:53"
+  },
+  {
+    "id": "f596a7e2-a3cd-4320-8df4-34b4af25f304",
+    "items": [
+      {
+        "id": 17,
+        "nombre": "Windbreaker Reflective",
+        "cantidad": 3,
+        "precio_unitario": 60000
+      },
+      {
+        "id": 18,
+        "nombre": "Beanie Ribbed",
+        "cantidad": 10,
+        "precio_unitario": 18000
+      }
+    ],
+    "total": 360000,
+    "fecha": "2025-04-17 03:32:00"
+  },
+  {
+    "id": "11050a05-2a30-4f31-9f60-060287cd74ca",
+    "items": [
+      {
+        "id": 4,
+        "nombre": "Buzo Street",
+        "cantidad": 2,
+        "precio_unitario": 65000
+      }
+    ],
+    "total": 130000,
+    "fecha": "2025-04-18 03:32:02"
+  },
+  {
+    "id": "d2acf329-a644-4279-bbb1-8cda143d88fb",
+    "items": [
+      {
+        "id": 8,
+        "nombre": "Pantalón Cargo Tech",
+        "cantidad": 1,
+        "precio_unitario": 42000
+      }
+    ],
+    "total": 42000,
+    "fecha": "2025-04-23 03:32:04"
+  },
+  {
+    "id": "4b59869f-0560-40a5-9453-e4be05012cc3",
+    "items": [
+      {
+        "id": 1,
+        "nombre": "Camiseta Graphic",
+        "cantidad": 1,
+        "precio_unitario": 15000
+      }
+    ],
+    "total": 15000,
+    "fecha": "2025-04-23 03:32:05"
+  },
+  {
+    "id": "47e1ec08-7f13-4c03-8939-cb1ecfae7c25",
+    "items": [
+      {
+        "id": 1,
+        "nombre": "Camiseta Graphic",
+        "cantidad": 1,
+        "precio_unitario": 15000
+      }
+    ],
+    "total": 15000,
+    "fecha": "2025-04-29 03:32:06"
+  },
+  {
+    "id": "07164d89-7284-4b1b-93ea-7b71084d5fe8",
+    "items": [
+      {
+        "id": 1,
+        "nombre": "Camiseta Graphic",
+        "cantidad": 1,
+        "precio_unitario": 15000
+      }
+    ],
+    "total": 15000,
+    "fecha": "2025-04-29 03:32:08"
+  },
+  {
+    "id": "ee723818-92a7-406f-bf53-a6c33e6222a0",
+    "items": [
+      {
+        "id": 2,
+        "nombre": "Remera Oversize",
+        "cantidad": 1,
+        "precio_unitario": 32000
+      }
+    ],
+    "total": 32000,
+    "fecha": "2025-04-30 03:32:09"
+  },
+  {
+    "id": "f3038568-cf92-45d7-9ad6-15a3d9ed622f",
+    "items": [
+      {
+        "id": 4,
+        "nombre": "Buzo Street",
+        "cantidad": 2,
+        "precio_unitario": 65000
+      }
+    ],
+    "total": 130000,
+    "fecha": "2025-05-01 03:32:10"
+  },
+  {
+    "id": "165a9935-314d-4853-8085-8301e1e9b5b8",
+    "items": [
+      {
+        "id": 7,
+        "nombre": "Chaqueta Bomber Urbano",
+        "cantidad": 1,
+        "precio_unitario": 85000
+      }
+    ],
+    "total": 85000,
+    "fecha": "2025-05-01 03:32:13"
+  },
+  {
+    "id": "6d1d66eb-1070-471d-8a08-0f459fbed3c6",
+    "items": [
+      {
+        "id": 7,
+        "nombre": "Chaqueta Bomber Urbano",
+        "cantidad": 1,
+        "precio_unitario": 85000
+      }
+    ],
+    "total": 85000,
+    "fecha": "2025-05-03 03:32:14"
+  },
+  {
+    "id": "2efbfb41-5870-4900-a017-764a0f43f3e7",
+    "items": [
+      {
+        "id": 6,
+        "nombre": "Denim Overshirt",
+        "cantidad": 2,
+        "precio_unitario": 70000
+      }
+    ],
+    "total": 140000,
+    "fecha": "2025-05-03 03:32:16"
+  },
+  {
+    "id": "523ce594-71bd-4ef3-9156-f3d42c8421fb",
+    "items": [
+      {
+        "id": 5,
+        "nombre": "Buzo Overshirt Denim",
+        "cantidad": 1,
+        "precio_unitario": 72000
+      }
+    ],
+    "total": 72000,
+    "fecha": "2025-05-04 03:32:18"
+  },
+  {
+    "id": "62b3efd2-c7b6-442c-b0f1-704932707db2",
+    "items": [
+      {
+        "id": 10,
+        "nombre": "Sneakers Urban Tech",
+        "cantidad": 1,
+        "precio_unitario": 68000
+      },
+      {
+        "id": 9,
+        "nombre": "Camisa Workwear",
+        "cantidad": 1,
+        "precio_unitario": 48000
+      },
+      {
+        "id": 12,
+        "nombre": "Bufanda Streetwear",
+        "cantidad": 2,
+        "precio_unitario": 25000
+      }
+    ],
+    "total": 166000,
+    "fecha": "2025-05-05 03:32:24"
+  },
+  {
+    "id": "850b8066-3ad1-4849-ac59-ee75025c3c13",
+    "items": [
+      {
+        "id": 12,
+        "nombre": "Bufanda Streetwear",
+        "cantidad": 1,
+        "precio_unitario": 25000
+      }
+    ],
+    "total": 25000,
+    "fecha": "2025-05-05 03:32:26"
+  },
+  {
+    "id": "f1fe18c8-8888-4b94-9ca7-e2f2164a4d9a",
+    "items": [
+      {
+        "id": 12,
+        "nombre": "Bufanda Streetwear",
+        "cantidad": 1,
+        "precio_unitario": 25000
+      }
+    ],
+    "total": 25000,
+    "fecha": "2025-05-07 03:32:28"
+  },
+  {
+    "id": "5be9b5e4-005f-4943-b3ba-b8d6160f43dd",
+    "items": [
+      {
+        "id": 12,
+        "nombre": "Bufanda Streetwear",
+        "cantidad": 4,
+        "precio_unitario": 25000
+      }
+    ],
+    "total": 100000,
+    "fecha": "2025-05-08 03:32:30"
+  },
+  {
+    "id": "eaf038de-c55b-42c4-b759-180eb6b2d814",
+    "items": [
+      {
+        "id": 11,
+        "nombre": "Gorra Snapback",
+        "cantidad": 1,
+        "precio_unitario": 18000
+      },
+      {
+        "id": 12,
+        "nombre": "Bufanda Streetwear",
+        "cantidad": 1,
+        "precio_unitario": 25000
+      }
+    ],
+    "total": 43000,
+    "fecha": "2025-05-08 03:32:33"
+  },
+  {
+    "id": "29133d58-e4fc-4474-bff6-cb094b39c5ae",
+    "items": [
+      {
+        "id": 11,
+        "nombre": "Gorra Snapback",
+        "cantidad": 1,
+        "precio_unitario": 18000
+      }
+    ],
+    "total": 18000,
+    "fecha": "2025-05-08 03:32:35"
+  },
+  {
+    "id": "06e31db4-3c7a-4bcc-91e4-6971c39db9d2",
+    "items": [
+      {
+        "id": 11,
+        "nombre": "Gorra Snapback",
+        "cantidad": 1,
+        "precio_unitario": 18000
+      },
+      {
+        "id": 10,
+        "nombre": "Sneakers Urban Tech",
+        "cantidad": 1,
+        "precio_unitario": 68000
+      }
+    ],
+    "total": 86000,
+    "fecha": "2025-05-10 03:32:37"
+  },
+  {
+    "id": "b2178dce-bd21-429e-aff8-7f894e70d922",
+    "items": [
+      {
+        "id": 16,
+        "nombre": "Hoodie Duo Tone",
+        "cantidad": 2,
+        "precio_unitario": 70000
+      },
+      {
+        "id": 15,
+        "nombre": "Medias Logo Urban",
+        "cantidad": 2,
+        "precio_unitario": 12000
+      },
+      {
+        "id": 14,
+        "nombre": "Cinturón Canvas Tech",
+        "cantidad": 1,
+        "precio_unitario": 21000
+      }
+    ],
+    "total": 185000,
+    "fecha": "2025-05-11 03:32:42"
+  },
+  {
+    "id": "73dd83b9-2f47-49d4-b964-ef1dd0a2af73",
+    "items": [
+      {
+        "id": 14,
+        "nombre": "Cinturón Canvas Tech",
+        "cantidad": 1,
+        "precio_unitario": 21000
+      }
+    ],
+    "total": 21000,
+    "fecha": "2025-05-11 03:32:45"
+  },
+  {
+    "id": "bdeef8bf-950d-4a6a-93e8-078333e4637c",
+    "items": [
+      {
+        "id": 20,
+        "nombre": "Reloj Smart Strap",
+        "cantidad": 2,
+        "precio_unitario": 95000
+      }
+    ],
+    "total": 190000,
+    "fecha": "2025-05-14 03:32:52"
+  },
+  {
+    "id": "3798cf60-8647-4691-ad15-450690d50964",
+    "items": [
+      {
+        "id": 1,
+        "nombre": "Camiseta Graphic",
+        "cantidad": 2,
+        "precio_unitario": 15000
+      }
+    ],
+    "total": 30000,
+    "fecha": "2025-05-14 03:32:56"
+  },
+  {
+    "id": "5af9e9e1-25f4-4676-9743-5f5329f2a775",
+    "items": [
+      {
+        "id": 4,
+        "nombre": "Buzo Street",
+        "cantidad": 1,
+        "precio_unitario": 65000
+      }
+    ],
+    "total": 65000,
+    "fecha": "2025-05-15 03:32:57"
+  },
+  {
+    "id": "529e8721-1694-4574-8c8e-1d0c99299116",
+    "items": [
+      {
+        "id": 1,
+        "nombre": "Camiseta Graphic",
+        "cantidad": 2,
+        "precio_unitario": 15000
+      }
+    ],
+    "total": 30000,
+    "fecha": "2025-05-17 03:32:59"
+  },
+  {
+    "id": "c28dc466-8960-4649-ace6-e4095f519ce7",
+    "items": [
+      {
+        "id": 4,
+        "nombre": "Buzo Street",
+        "cantidad": 2,
+        "precio_unitario": 65000
+      }
+    ],
+    "total": 130000,
+    "fecha": "2025-05-18 03:33:01"
+  },
+  {
+    "id": "14776261-dc4c-4366-9ec6-042368f342e9",
+    "items": [
+      {
+        "id": 6,
+        "nombre": "Denim Overshirt",
+        "cantidad": 1,
+        "precio_unitario": 70000
+      },
+      {
+        "id": 7,
+        "nombre": "Chaqueta Bomber Urbano",
+        "cantidad": 1,
+        "precio_unitario": 85000
+      }
+    ],
+    "total": 155000,
+    "fecha": "2025-05-19 03:33:05"
+  },
+  {
+    "id": "ab5003f5-790b-4217-bd82-88579934e613",
+    "items": [
+      {
+        "id": 8,
+        "nombre": "Pantalón Cargo Tech",
+        "cantidad": 1,
+        "precio_unitario": 42000
+      }
+    ],
+    "total": 42000,
+    "fecha": "2025-05-21 03:33:07"
+  },
+  {
+    "id": "791fb7ce-69dd-4168-b24e-3e0b3e131f4a",
+    "items": [
+      {
+        "id": 8,
+        "nombre": "Pantalón Cargo Tech",
+        "cantidad": 1,
+        "precio_unitario": 42000
+      }
+    ],
+    "total": 42000,
+    "fecha": "2025-05-22 03:33:08"
+  },
+  {
+    "id": "e3e260ff-a44b-4147-958d-a35c6a928688",
+    "items": [
+      {
+        "id": 5,
+        "nombre": "Buzo Overshirt Denim",
+        "cantidad": 1,
+        "precio_unitario": 72000
+      }
+    ],
+    "total": 72000,
+    "fecha": "2025-05-22 03:33:11"
+  },
+  {
+    "id": "22f28760-3cad-4e66-896a-25f8c193e4a7",
+    "items": [
+      {
+        "id": 8,
+        "nombre": "Pantalón Cargo Tech",
+        "cantidad": 1,
+        "precio_unitario": 42000
+      }
+    ],
+    "total": 42000,
+    "fecha": "2025-05-23 03:33:13"
+  },
+  {
+    "id": "53c14404-f5b9-40f9-be22-12f8da89537c",
+    "items": [
+      {
+        "id": 8,
+        "nombre": "Pantalón Cargo Tech",
+        "cantidad": 1,
+        "precio_unitario": 42000
+      }
+    ],
+    "total": 42000,
+    "fecha": "2025-05-23 03:33:14"
+  },
+  {
+    "id": "9a734938-de35-4b55-88f3-57465fc3d147",
+    "items": [
+      {
+        "id": 3,
+        "nombre": "Buzo Skate",
+        "cantidad": 1,
+        "precio_unitario": 65000
+      }
+    ],
+    "total": 65000,
+    "fecha": "2025-05-26 03:33:16"
+  },
+  {
+    "id": "1b036489-d576-4daf-aff1-611ceda993d2",
+    "items": [
+      {
+        "id": 3,
+        "nombre": "Buzo Skate",
+        "cantidad": 1,
+        "precio_unitario": 65000
+      }
+    ],
+    "total": 65000,
+    "fecha": "2025-05-27 03:33:17"
+  },
+  {
+    "id": "f434ff1c-26aa-4e25-9384-8146e80a0ee6",
+    "items": [
+      {
+        "id": 3,
+        "nombre": "Buzo Skate",
+        "cantidad": 1,
+        "precio_unitario": 65000
+      }
+    ],
+    "total": 65000,
+    "fecha": "2025-05-29 03:33:18"
+  },
+  {
+    "id": "51428a88-2c73-4c0e-a16c-5c0115c1bd8c",
+    "items": [
+      {
+        "id": 7,
+        "nombre": "Chaqueta Bomber Urbano",
+        "cantidad": 1,
+        "precio_unitario": 85000
+      },
+      {
+        "id": 8,
+        "nombre": "Pantalón Cargo Tech",
+        "cantidad": 1,
+        "precio_unitario": 42000
+      }
+    ],
+    "total": 127000,
+    "fecha": "2025-05-29 03:33:21"
+  },
+  {
+    "id": "9df3c2b9-dfc8-4b0e-a203-6c7d123ca1e7",
+    "items": [
+      {
+        "id": 3,
+        "nombre": "Buzo Skate",
+        "cantidad": 1,
+        "precio_unitario": 65000
+      },
+      {
+        "id": 6,
+        "nombre": "Denim Overshirt",
+        "cantidad": 1,
+        "precio_unitario": 70000
+      },
+      {
+        "id": 5,
+        "nombre": "Buzo Overshirt Denim",
+        "cantidad": 1,
+        "precio_unitario": 72000
+      }
+    ],
+    "total": 207000,
+    "fecha": "2025-06-01 03:33:23"
+  },
+  {
+    "id": "b8f0a884-ecb9-4bf9-b5e2-0b043ddc054b",
+    "items": [
+      {
+        "id": 10,
+        "nombre": "Sneakers Urban Tech",
+        "cantidad": 4,
+        "precio_unitario": 68000
+      },
+      {
+        "id": 11,
+        "nombre": "Gorra Snapback",
+        "cantidad": 1,
+        "precio_unitario": 18000
+      }
+    ],
+    "total": 290000,
+    "fecha": "2025-06-02 03:33:28"
+  },
+  {
+    "id": "174a51dc-1575-468e-9698-1c1249d5b098",
+    "items": [
+      {
+        "id": 11,
+        "nombre": "Gorra Snapback",
+        "cantidad": 3,
+        "precio_unitario": 18000
+      }
+    ],
+    "total": 54000,
+    "fecha": "2025-06-04 03:33:31"
+  },
+  {
+    "id": "f51e5a6a-f253-4e86-b6c4-bd65827dca8f",
+    "items": [
+      {
+        "id": 15,
+        "nombre": "Medias Logo Urban",
+        "cantidad": 1,
+        "precio_unitario": 12000
+      },
+      {
+        "id": 16,
+        "nombre": "Hoodie Duo Tone",
+        "cantidad": 1,
+        "precio_unitario": 70000
+      },
+      {
+        "id": 14,
+        "nombre": "Cinturón Canvas Tech",
+        "cantidad": 1,
+        "precio_unitario": 21000
+      }
+    ],
+    "total": 103000,
+    "fecha": "2025-06-07 03:33:37"
+  },
+  {
+    "id": "5522ac9c-cc1a-4211-a06f-54699b5ce72c",
+    "items": [
+      {
+        "id": 1,
+        "nombre": "Camiseta Graphic",
+        "cantidad": 1,
+        "precio_unitario": 15000
+      }
+    ],
+    "total": 15000,
+    "fecha": "2025-06-07 03:33:42"
+  },
+  {
+    "id": "c883c989-910b-4622-9cd5-9de7b89a7cb2",
+    "items": [
+      {
+        "id": 4,
+        "nombre": "Buzo Street",
+        "cantidad": 1,
+        "precio_unitario": 65000
+      }
+    ],
+    "total": 65000,
+    "fecha": "2025-06-10 03:33:43"
+  },
+  {
+    "id": "ec2e6c2e-0d00-4c53-98de-d2e052292e8f",
+    "items": [
+      {
+        "id": 4,
+        "nombre": "Buzo Street",
+        "cantidad": 1,
+        "precio_unitario": 65000
+      }
+    ],
+    "total": 65000,
+    "fecha": "2025-06-11 03:33:44"
+  },
+  {
+    "id": "bfbc4697-ceb9-4f20-bcb3-470eba278154",
+    "items": [
+      {
+        "id": 7,
+        "nombre": "Chaqueta Bomber Urbano",
+        "cantidad": 1,
+        "precio_unitario": 85000
+      }
+    ],
+    "total": 85000,
+    "fecha": "2025-06-12 03:33:47"
+  },
+  {
+    "id": "08e6a78f-eaba-41fd-89c7-7c0fe308e823",
+    "items": [
+      {
+        "id": 7,
+        "nombre": "Chaqueta Bomber Urbano",
+        "cantidad": 1,
+        "precio_unitario": 85000
+      }
+    ],
+    "total": 85000,
+    "fecha": "2025-06-12 03:33:48"
+  },
+  {
+    "id": "b1fd257e-504a-44ea-b088-bd3ef0f9bd65",
+    "items": [
+      {
+        "id": 7,
+        "nombre": "Chaqueta Bomber Urbano",
+        "cantidad": 2,
+        "precio_unitario": 85000
+      }
+    ],
+    "total": 170000,
+    "fecha": "2025-06-16 03:33:51"
+  },
+  {
+    "id": "a9afff03-3301-48bd-a4b9-f50bebea9f9a",
+    "items": [
+      {
+        "id": 7,
+        "nombre": "Chaqueta Bomber Urbano",
+        "cantidad": 1,
+        "precio_unitario": 85000
+      }
+    ],
+    "total": 85000,
+    "fecha": "2025-06-17 03:33:53"
+  },
+  {
+    "id": "4d09dc4e-3a4b-42b8-86c7-6bc8675cd53e",
+    "items": [
+      {
+        "id": 6,
+        "nombre": "Denim Overshirt",
+        "cantidad": 1,
+        "precio_unitario": 70000
+      }
+    ],
+    "total": 70000,
+    "fecha": "2025-06-20 03:33:55"
+  },
+  {
+    "id": "901cd28c-71e1-4408-8e78-844660e8897a",
+    "items": [
+      {
+        "id": 6,
+        "nombre": "Denim Overshirt",
+        "cantidad": 1,
+        "precio_unitario": 70000
+      }
+    ],
+    "total": 70000,
+    "fecha": "2025-06-21 03:33:57"
+  },
+  {
+    "id": "8b65a986-2009-4499-9796-25558d0d9eb7",
+    "items": [
+      {
+        "id": 9,
+        "nombre": "Camisa Workwear",
+        "cantidad": 2,
+        "precio_unitario": 48000
+      }
+    ],
+    "total": 96000,
+    "fecha": "2025-06-22 03:34:01"
   }
 ]

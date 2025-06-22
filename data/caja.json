@@ -1,5 +1,5 @@
 {
-  "saldo": -343000.0,
+  "saldo": 3577000.0,
   "movimientos": [
     {
       "id": "0af025cd-d19a-43cc-8a29-d85c40e12ac5",
@@ -51,6 +51,554 @@
       "detalles": {
         "destinatario": "ABC Inmobiliaria",
         "concepto": "alquiler",
+        "metodo": "transferencia"
+      }
+    },
+    {
+      "id": "5adedd63-5327-46fb-8b1d-4001e9055016",
+      "tipo": "ingreso",
+      "monto": 192000,
+      "descripcion": "Venta #5",
+      "fecha": "2025-06-22 03:30:57"
+    },
+    {
+      "id": "71227322-e440-45d3-b955-14824d965742",
+      "tipo": "ingreso",
+      "monto": 155000,
+      "descripcion": "Venta #6",
+      "fecha": "2025-06-22 03:31:00"
+    },
+    {
+      "id": "070461fe-310b-4247-b0be-2fb58e7c37a0",
+      "tipo": "ingreso",
+      "monto": 144000,
+      "descripcion": "Venta #7",
+      "fecha": "2025-06-22 03:31:02"
+    },
+    {
+      "id": "074d018a-daa5-4d4b-aedb-709d23eaf19b",
+      "tipo": "ingreso",
+      "monto": 86000,
+      "descripcion": "Venta #8",
+      "fecha": "2025-06-22 03:31:06"
+    },
+    {
+      "id": "bd00080c-ccda-445f-a26f-8830ae73d10a",
+      "tipo": "ingreso",
+      "monto": 218000,
+      "descripcion": "Venta #9",
+      "fecha": "2025-06-22 03:31:12"
+    },
+    {
+      "id": "3d0723f0-7533-4896-b8fb-7a35f8b8cf0a",
+      "tipo": "ingreso",
+      "monto": 65000,
+      "descripcion": "Venta #10",
+      "fecha": "2025-06-22 03:31:14"
+    },
+    {
+      "id": "23b0483e-c14e-47e0-9dda-37e93859a312",
+      "tipo": "ingreso",
+      "monto": 130000,
+      "descripcion": "Venta #11",
+      "fecha": "2025-06-22 03:31:17"
+    },
+    {
+      "id": "2f9408de-085e-4acf-b706-07bdd2a6d8e6",
+      "tipo": "ingreso",
+      "monto": 96000,
+      "descripcion": "Venta #12",
+      "fecha": "2025-06-22 03:31:20"
+    },
+    {
+      "id": "648ead3f-28b5-4c46-8bc0-079e869d1ca0",
+      "tipo": "ingreso",
+      "monto": 15000,
+      "descripcion": "Venta #13",
+      "fecha": "2025-06-22 03:31:22"
+    },
+    {
+      "id": "a26ca091-0a63-4fac-9278-fb3057fb2fd0",
+      "tipo": "ingreso",
+      "monto": 15000,
+      "descripcion": "Venta #14",
+      "fecha": "2025-06-22 03:31:23"
+    },
+    {
+      "id": "2425fd3c-d76e-49b5-8eaf-430123e01f5e",
+      "tipo": "ingreso",
+      "monto": 15000,
+      "descripcion": "Venta #15",
+      "fecha": "2025-06-22 03:31:25"
+    },
+    {
+      "id": "259b7d56-abec-44db-b918-5c9d3b07ef91",
+      "tipo": "ingreso",
+      "monto": 144000,
+      "descripcion": "Venta #16",
+      "fecha": "2025-06-22 03:31:27"
+    },
+    {
+      "id": "47ca0d05-523b-4b9f-a1ed-57b57572729d",
+      "tipo": "ingreso",
+      "monto": 340000,
+      "descripcion": "Venta #17",
+      "fecha": "2025-06-22 03:31:29"
+    },
+    {
+      "id": "47888ca4-6057-4a68-ac48-29cb32c06d8a",
+      "tipo": "ingreso",
+      "monto": 42000,
+      "descripcion": "Venta #18",
+      "fecha": "2025-06-22 03:31:32"
+    },
+    {
+      "id": "bf53ed16-3ba4-4053-bd9f-69c619947aef",
+      "tipo": "ingreso",
+      "monto": 82000,
+      "descripcion": "Venta #19",
+      "fecha": "2025-06-22 03:31:35"
+    },
+    {
+      "id": "4fbc0a21-8e8d-46b5-80af-6dd61e7051a4",
+      "tipo": "ingreso",
+      "monto": 230000,
+      "descripcion": "Venta #20",
+      "fecha": "2025-06-22 03:31:42"
+    },
+    {
+      "id": "7e6dacd8-4da0-48c5-a4da-e8e079e3ee92",
+      "tipo": "ingreso",
+      "monto": 564000,
+      "descripcion": "Venta #21",
+      "fecha": "2025-06-22 03:31:49"
+    },
+    {
+      "id": "650d4326-f9f1-43ca-92ef-750417be5120",
+      "tipo": "ingreso",
+      "monto": 165000,
+      "descripcion": "Venta #22",
+      "fecha": "2025-06-22 03:31:53"
+    },
+    {
+      "id": "f596a7e2-a3cd-4320-8df4-34b4af25f304",
+      "tipo": "ingreso",
+      "monto": 360000,
+      "descripcion": "Venta #23",
+      "fecha": "2025-06-22 03:32:00"
+    },
+    {
+      "id": "11050a05-2a30-4f31-9f60-060287cd74ca",
+      "tipo": "ingreso",
+      "monto": 130000,
+      "descripcion": "Venta #24",
+      "fecha": "2025-06-22 03:32:02"
+    },
+    {
+      "id": "d2acf329-a644-4279-bbb1-8cda143d88fb",
+      "tipo": "ingreso",
+      "monto": 42000,
+      "descripcion": "Venta #25",
+      "fecha": "2025-06-22 03:32:04"
+    },
+    {
+      "id": "4b59869f-0560-40a5-9453-e4be05012cc3",
+      "tipo": "ingreso",
+      "monto": 15000,
+      "descripcion": "Venta #26",
+      "fecha": "2025-06-22 03:32:05"
+    },
+    {
+      "id": "47e1ec08-7f13-4c03-8939-cb1ecfae7c25",
+      "tipo": "ingreso",
+      "monto": 15000,
+      "descripcion": "Venta #27",
+      "fecha": "2025-06-22 03:32:06"
+    },
+    {
+      "id": "07164d89-7284-4b1b-93ea-7b71084d5fe8",
+      "tipo": "ingreso",
+      "monto": 15000,
+      "descripcion": "Venta #28",
+      "fecha": "2025-06-22 03:32:08"
+    },
+    {
+      "id": "ee723818-92a7-406f-bf53-a6c33e6222a0",
+      "tipo": "ingreso",
+      "monto": 32000,
+      "descripcion": "Venta #29",
+      "fecha": "2025-06-22 03:32:09"
+    },
+    {
+      "id": "f3038568-cf92-45d7-9ad6-15a3d9ed622f",
+      "tipo": "ingreso",
+      "monto": 130000,
+      "descripcion": "Venta #30",
+      "fecha": "2025-06-22 03:32:10"
+    },
+    {
+      "id": "165a9935-314d-4853-8085-8301e1e9b5b8",
+      "tipo": "ingreso",
+      "monto": 85000,
+      "descripcion": "Venta #31",
+      "fecha": "2025-06-22 03:32:13"
+    },
+    {
+      "id": "6d1d66eb-1070-471d-8a08-0f459fbed3c6",
+      "tipo": "ingreso",
+      "monto": 85000,
+      "descripcion": "Venta #32",
+      "fecha": "2025-06-22 03:32:14"
+    },
+    {
+      "id": "2efbfb41-5870-4900-a017-764a0f43f3e7",
+      "tipo": "ingreso",
+      "monto": 140000,
+      "descripcion": "Venta #33",
+      "fecha": "2025-06-22 03:32:16"
+    },
+    {
+      "id": "523ce594-71bd-4ef3-9156-f3d42c8421fb",
+      "tipo": "ingreso",
+      "monto": 72000,
+      "descripcion": "Venta #34",
+      "fecha": "2025-06-22 03:32:18"
+    },
+    {
+      "id": "62b3efd2-c7b6-442c-b0f1-704932707db2",
+      "tipo": "ingreso",
+      "monto": 166000,
+      "descripcion": "Venta #35",
+      "fecha": "2025-06-22 03:32:24"
+    },
+    {
+      "id": "850b8066-3ad1-4849-ac59-ee75025c3c13",
+      "tipo": "ingreso",
+      "monto": 25000,
+      "descripcion": "Venta #36",
+      "fecha": "2025-06-22 03:32:26"
+    },
+    {
+      "id": "f1fe18c8-8888-4b94-9ca7-e2f2164a4d9a",
+      "tipo": "ingreso",
+      "monto": 25000,
+      "descripcion": "Venta #37",
+      "fecha": "2025-06-22 03:32:28"
+    },
+    {
+      "id": "5be9b5e4-005f-4943-b3ba-b8d6160f43dd",
+      "tipo": "ingreso",
+      "monto": 100000,
+      "descripcion": "Venta #38",
+      "fecha": "2025-06-22 03:32:30"
+    },
+    {
+      "id": "eaf038de-c55b-42c4-b759-180eb6b2d814",
+      "tipo": "ingreso",
+      "monto": 43000,
+      "descripcion": "Venta #39",
+      "fecha": "2025-06-22 03:32:33"
+    },
+    {
+      "id": "29133d58-e4fc-4474-bff6-cb094b39c5ae",
+      "tipo": "ingreso",
+      "monto": 18000,
+      "descripcion": "Venta #40",
+      "fecha": "2025-06-22 03:32:35"
+    },
+    {
+      "id": "06e31db4-3c7a-4bcc-91e4-6971c39db9d2",
+      "tipo": "ingreso",
+      "monto": 86000,
+      "descripcion": "Venta #41",
+      "fecha": "2025-06-22 03:32:37"
+    },
+    {
+      "id": "b2178dce-bd21-429e-aff8-7f894e70d922",
+      "tipo": "ingreso",
+      "monto": 185000,
+      "descripcion": "Venta #42",
+      "fecha": "2025-06-22 03:32:42"
+    },
+    {
+      "id": "73dd83b9-2f47-49d4-b964-ef1dd0a2af73",
+      "tipo": "ingreso",
+      "monto": 21000,
+      "descripcion": "Venta #43",
+      "fecha": "2025-06-22 03:32:45"
+    },
+    {
+      "id": "bdeef8bf-950d-4a6a-93e8-078333e4637c",
+      "tipo": "ingreso",
+      "monto": 190000,
+      "descripcion": "Venta #44",
+      "fecha": "2025-06-22 03:32:52"
+    },
+    {
+      "id": "3798cf60-8647-4691-ad15-450690d50964",
+      "tipo": "ingreso",
+      "monto": 30000,
+      "descripcion": "Venta #45",
+      "fecha": "2025-06-22 03:32:56"
+    },
+    {
+      "id": "5af9e9e1-25f4-4676-9743-5f5329f2a775",
+      "tipo": "ingreso",
+      "monto": 65000,
+      "descripcion": "Venta #46",
+      "fecha": "2025-06-22 03:32:57"
+    },
+    {
+      "id": "529e8721-1694-4574-8c8e-1d0c99299116",
+      "tipo": "ingreso",
+      "monto": 30000,
+      "descripcion": "Venta #47",
+      "fecha": "2025-06-22 03:32:59"
+    },
+    {
+      "id": "c28dc466-8960-4649-ace6-e4095f519ce7",
+      "tipo": "ingreso",
+      "monto": 130000,
+      "descripcion": "Venta #48",
+      "fecha": "2025-06-22 03:33:01"
+    },
+    {
+      "id": "14776261-dc4c-4366-9ec6-042368f342e9",
+      "tipo": "ingreso",
+      "monto": 155000,
+      "descripcion": "Venta #49",
+      "fecha": "2025-06-22 03:33:05"
+    },
+    {
+      "id": "ab5003f5-790b-4217-bd82-88579934e613",
+      "tipo": "ingreso",
+      "monto": 42000,
+      "descripcion": "Venta #50",
+      "fecha": "2025-06-22 03:33:07"
+    },
+    {
+      "id": "791fb7ce-69dd-4168-b24e-3e0b3e131f4a",
+      "tipo": "ingreso",
+      "monto": 42000,
+      "descripcion": "Venta #51",
+      "fecha": "2025-06-22 03:33:08"
+    },
+    {
+      "id": "e3e260ff-a44b-4147-958d-a35c6a928688",
+      "tipo": "ingreso",
+      "monto": 72000,
+      "descripcion": "Venta #52",
+      "fecha": "2025-06-22 03:33:11"
+    },
+    {
+      "id": "22f28760-3cad-4e66-896a-25f8c193e4a7",
+      "tipo": "ingreso",
+      "monto": 42000,
+      "descripcion": "Venta #53",
+      "fecha": "2025-06-22 03:33:13"
+    },
+    {
+      "id": "53c14404-f5b9-40f9-be22-12f8da89537c",
+      "tipo": "ingreso",
+      "monto": 42000,
+      "descripcion": "Venta #54",
+      "fecha": "2025-06-22 03:33:14"
+    },
+    {
+      "id": "9a734938-de35-4b55-88f3-57465fc3d147",
+      "tipo": "ingreso",
+      "monto": 65000,
+      "descripcion": "Venta #55",
+      "fecha": "2025-06-22 03:33:16"
+    },
+    {
+      "id": "1b036489-d576-4daf-aff1-611ceda993d2",
+      "tipo": "ingreso",
+      "monto": 65000,
+      "descripcion": "Venta #56",
+      "fecha": "2025-06-22 03:33:17"
+    },
+    {
+      "id": "f434ff1c-26aa-4e25-9384-8146e80a0ee6",
+      "tipo": "ingreso",
+      "monto": 65000,
+      "descripcion": "Venta #57",
+      "fecha": "2025-06-22 03:33:18"
+    },
+    {
+      "id": "51428a88-2c73-4c0e-a16c-5c0115c1bd8c",
+      "tipo": "ingreso",
+      "monto": 127000,
+      "descripcion": "Venta #58",
+      "fecha": "2025-06-22 03:33:21"
+    },
+    {
+      "id": "9df3c2b9-dfc8-4b0e-a203-6c7d123ca1e7",
+      "tipo": "ingreso",
+      "monto": 207000,
+      "descripcion": "Venta #59",
+      "fecha": "2025-06-22 03:33:23"
+    },
+    {
+      "id": "b8f0a884-ecb9-4bf9-b5e2-0b043ddc054b",
+      "tipo": "ingreso",
+      "monto": 290000,
+      "descripcion": "Venta #60",
+      "fecha": "2025-06-22 03:33:28"
+    },
+    {
+      "id": "174a51dc-1575-468e-9698-1c1249d5b098",
+      "tipo": "ingreso",
+      "monto": 54000,
+      "descripcion": "Venta #61",
+      "fecha": "2025-06-22 03:33:31"
+    },
+    {
+      "id": "f51e5a6a-f253-4e86-b6c4-bd65827dca8f",
+      "tipo": "ingreso",
+      "monto": 103000,
+      "descripcion": "Venta #62",
+      "fecha": "2025-06-22 03:33:37"
+    },
+    {
+      "id": "5522ac9c-cc1a-4211-a06f-54699b5ce72c",
+      "tipo": "ingreso",
+      "monto": 15000,
+      "descripcion": "Venta #63",
+      "fecha": "2025-06-22 03:33:42"
+    },
+    {
+      "id": "c883c989-910b-4622-9cd5-9de7b89a7cb2",
+      "tipo": "ingreso",
+      "monto": 65000,
+      "descripcion": "Venta #64",
+      "fecha": "2025-06-22 03:33:43"
+    },
+    {
+      "id": "ec2e6c2e-0d00-4c53-98de-d2e052292e8f",
+      "tipo": "ingreso",
+      "monto": 65000,
+      "descripcion": "Venta #65",
+      "fecha": "2025-06-22 03:33:44"
+    },
+    {
+      "id": "bfbc4697-ceb9-4f20-bcb3-470eba278154",
+      "tipo": "ingreso",
+      "monto": 85000,
+      "descripcion": "Venta #66",
+      "fecha": "2025-06-22 03:33:47"
+    },
+    {
+      "id": "08e6a78f-eaba-41fd-89c7-7c0fe308e823",
+      "tipo": "ingreso",
+      "monto": 85000,
+      "descripcion": "Venta #67",
+      "fecha": "2025-06-22 03:33:48"
+    },
+    {
+      "id": "b1fd257e-504a-44ea-b088-bd3ef0f9bd65",
+      "tipo": "ingreso",
+      "monto": 170000,
+      "descripcion": "Venta #68",
+      "fecha": "2025-06-22 03:33:51"
+    },
+    {
+      "id": "a9afff03-3301-48bd-a4b9-f50bebea9f9a",
+      "tipo": "ingreso",
+      "monto": 85000,
+      "descripcion": "Venta #69",
+      "fecha": "2025-06-22 03:33:53"
+    },
+    {
+      "id": "4d09dc4e-3a4b-42b8-86c7-6bc8675cd53e",
+      "tipo": "ingreso",
+      "monto": 70000,
+      "descripcion": "Venta #70",
+      "fecha": "2025-06-22 03:33:55"
+    },
+    {
+      "id": "901cd28c-71e1-4408-8e78-844660e8897a",
+      "tipo": "ingreso",
+      "monto": 70000,
+      "descripcion": "Venta #71",
+      "fecha": "2025-06-22 03:33:57"
+    },
+    {
+      "id": "8b65a986-2009-4499-9796-25558d0d9eb7",
+      "tipo": "ingreso",
+      "monto": 96000,
+      "descripcion": "Venta #72",
+      "fecha": "2025-06-22 03:34:01"
+    },
+    {
+      "id": "3",
+      "tipo": "egreso",
+      "monto": 1250000.0,
+      "descripcion": "Compra de mercaderia",
+      "fecha": "2025-03-01 00:00:00",
+      "detalles": {
+        "destinatario": "Textil SA",
+        "concepto": "proveedor",
+        "metodo": "transferencia"
+      }
+    },
+    {
+      "id": "4",
+      "tipo": "egreso",
+      "monto": 500000.0,
+      "descripcion": "Alquiler Marzo",
+      "fecha": "2025-03-01 00:00:00",
+      "detalles": {
+        "destinatario": "ABC Inmobiliaria",
+        "concepto": "alquiler",
+        "metodo": "transferencia"
+      }
+    },
+    {
+      "id": "5",
+      "tipo": "egreso",
+      "monto": 500000.0,
+      "descripcion": "Alquiler Abril",
+      "fecha": "2025-04-01 00:00:00",
+      "detalles": {
+        "destinatario": "ABC Inmobiliaria",
+        "concepto": "alquiler",
+        "metodo": "transferencia"
+      }
+    },
+    {
+      "id": "6",
+      "tipo": "egreso",
+      "monto": 550000.0,
+      "descripcion": "Alquiler Mayo",
+      "fecha": "2025-05-01 00:00:00",
+      "detalles": {
+        "destinatario": "ABC Inmobiliaria",
+        "concepto": "alquiler",
+        "metodo": "transferencia"
+      }
+    },
+    {
+      "id": "7",
+      "tipo": "egreso",
+      "monto": 180000.0,
+      "descripcion": "Luz Marzo-Abril",
+      "fecha": "2025-03-12 00:00:00",
+      "detalles": {
+        "destinatario": "Edenor",
+        "concepto": "servicios",
+        "metodo": "efectivo"
+      }
+    },
+    {
+      "id": "8",
+      "tipo": "egreso",
+      "monto": 210000.0,
+      "descripcion": "Luz Mayo-Junio",
+      "fecha": "2025-06-11 00:00:00",
+      "detalles": {
+        "destinatario": "Edenor",
+        "concepto": "servicios",
         "metodo": "transferencia"
       }
     }

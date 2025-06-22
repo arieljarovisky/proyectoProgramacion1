@@ -1,56 +1,182 @@
 [
   {
     "id": 1,
-    "nombre": "Nuevo nombre del producto",
-    "descripcion": "Remera de algod\u00f3n 100% con corte amplio",
+    "nombre": "Camiseta Graphic",
+    "descripcion": "Remera de algod\u00f3n 100% con corte amplio y estampado bold",
     "precio": 15000,
-    "stock": 7,
+    "stock": 39,
     "categoria": "Indumentaria",
     "talle": "\u00danico"
   },
   {
     "id": 2,
     "nombre": "Remera Oversize",
-    "descripcion": "Remera de algod\u00f3n 100% con corte amplio",
+    "descripcion": "Remera de algod\u00f3n 100% con corte amplio y detalle en costuras",
     "precio": 32000,
-    "stock": 2,
+    "stock": 46,
     "categoria": "Indumentaria",
     "talle": "L"
   },
   {
     "id": 3,
-    "nombre": "Buzo 'Basics' Oversize",
-    "descripcion": "Remera de algod\u00f3n 100% con corte amplio",
+    "nombre": "Buzo Skate",
+    "descripcion": "Buzo de algod\u00f3n 100% con capucha ajustable y bolsillo canguro",
     "precio": 65000,
-    "stock": 7,
+    "stock": 45,
     "categoria": "Indumentaria",
     "talle": "M"
   },
   {
     "id": 4,
-    "nombre": "Buzo 'Basics' Oversize",
-    "descripcion": "Remera de algod\u00f3n 100% con corte amplio",
+    "nombre": "Buzo Street",
+    "descripcion": "Buzo de algod\u00f3n grueso con logo bordado en pecho",
     "precio": 65000,
-    "stock": 6,
+    "stock": 38,
     "categoria": "Indumentaria",
     "talle": "L"
   },
   {
     "id": 5,
-    "nombre": "Buzo 'Basics' Oversize",
-    "descripcion": "Remera de algod\u00f3n 100% con corte amplio",
-    "precio": 65000,
-    "stock": 7,
+    "nombre": "Buzo Overshirt Denim",
+    "descripcion": "Sobrecamisa tipo overshirt de jean con bolsillos frontales",
+    "precio": 72000,
+    "stock": 43,
     "categoria": "Indumentaria",
     "talle": "XL"
   },
   {
     "id": 6,
-    "nombre": "Buzo 'Basics' Oversize",
-    "descripcion": "Remera de algod\u00f3n 100% con corte amplio",
-    "precio": 65000,
-    "stock": 7,
+    "nombre": "Denim Overshirt",
+    "descripcion": "Sobrecamisa de jean desgastado con bot\u00f3n met\u00e1lico",
+    "precio": 70000,
+    "stock": 41,
     "categoria": "Indumentaria",
-    "talle": "XL"
+    "talle": "XXL"
+  },
+  {
+    "id": 7,
+    "nombre": "Chaqueta Bomber Urbano",
+    "descripcion": "Chaqueta bomber satinada con ribetes contrastantes",
+    "precio": 85000,
+    "stock": 35,
+    "categoria": "Indumentaria",
+    "talle": "M"
+  },
+  {
+    "id": 8,
+    "nombre": "Pantal\u00f3n Cargo Tech",
+    "descripcion": "Cargo pants con bolsillos adicionales y corte tapered",
+    "precio": 42000,
+    "stock": 42,
+    "categoria": "Indumentaria",
+    "talle": "S"
+  },
+  {
+    "id": 9,
+    "nombre": "Camisa Workwear",
+    "descripcion": "Camisa de lino ligero para clima c\u00e1lido, bolsillo frontal",
+    "precio": 48000,
+    "stock": 41,
+    "categoria": "Indumentaria",
+    "talle": "L"
+  },
+  {
+    "id": 10,
+    "nombre": "Sneakers Urban Tech",
+    "descripcion": "Zapatillas deportivas con suela gruesa antideslizante",
+    "precio": 68000,
+    "stock": 41,
+    "categoria": "Calzado",
+    "talle": "42"
+  },
+  {
+    "id": 11,
+    "nombre": "Gorra Snapback",
+    "descripcion": "Gorra plana con logo bordado y ajuste trasero",
+    "precio": 18000,
+    "stock": 42,
+    "categoria": "Accesorios",
+    "talle": "\u00danico"
+  },
+  {
+    "id": 12,
+    "nombre": "Bufanda Streetwear",
+    "descripcion": "Bufanda de acr\u00edlico suave con estampado geom\u00e9trico",
+    "precio": 25000,
+    "stock": 41,
+    "categoria": "Accesorios",
+    "talle": "\u00danico"
+  },
+  {
+    "id": 13,
+    "nombre": "Mochila Urban Tech",
+    "descripcion": "Mochila resistente al agua con compartimentos m\u00faltiples",
+    "precio": 55000,
+    "stock": 47,
+    "categoria": "Accesorios",
+    "talle": "\u00danico"
+  },
+  {
+    "id": 14,
+    "nombre": "Cintur\u00f3n Canvas Tech",
+    "descripcion": "Cintur\u00f3n de lona con hebilla met\u00e1lica ajustable",
+    "precio": 21000,
+    "stock": 47,
+    "categoria": "Accesorios",
+    "talle": "\u00danico"
+  },
+  {
+    "id": 15,
+    "nombre": "Medias Logo Urban",
+    "descripcion": "Pack de 3 pares de medias con logo bordado",
+    "precio": 12000,
+    "stock": 46,
+    "categoria": "Accesorios",
+    "talle": "\u00danico"
+  },
+  {
+    "id": 16,
+    "nombre": "Hoodie Duo Tone",
+    "descripcion": "Hoodie de algod\u00f3n con capucha y panel bicolor",
+    "precio": 70000,
+    "stock": 46,
+    "categoria": "Indumentaria",
+    "talle": "M"
+  },
+  {
+    "id": 17,
+    "nombre": "Windbreaker Reflective",
+    "descripcion": "Rompevientos ligero con bandas reflectantes",
+    "precio": 60000,
+    "stock": 46,
+    "categoria": "Indumentaria",
+    "talle": "L"
+  },
+  {
+    "id": 18,
+    "nombre": "Beanie Ribbed",
+    "descripcion": "Gorro de punto acanalado para clima fr\u00edo",
+    "precio": 18000,
+    "stock": 39,
+    "categoria": "Accesorios",
+    "talle": "\u00danico"
+  },
+  {
+    "id": 19,
+    "nombre": "Gafas Urban Aviator",
+    "descripcion": "Gafas de sol estilo aviador con montura met\u00e1lica",
+    "precio": 45000,
+    "stock": 46,
+    "categoria": "Accesorios",
+    "talle": "\u00danico"
+  },
+  {
+    "id": 20,
+    "nombre": "Reloj Smart Strap",
+    "descripcion": "Reloj inteligente con correa de silicona y funciones health",
+    "precio": 95000,
+    "stock": 46,
+    "categoria": "Accesorios",
+    "talle": "\u00danico"
   }
 ]
