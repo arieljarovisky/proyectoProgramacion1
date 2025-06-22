@@ -23,8 +23,8 @@ calculadora_bp = Blueprint('calculadora', __name__, url_prefix='/api/calculadora
 
 # Blueprint para pagos
 pagos_bp = Blueprint('pagos', __name__, url_prefix='/api/pagos')
-pagos_bp.route('/obtener_pagos', methods=['GET'])(obtener_pagos)
-pagos_bp.route('', methods=['POST'])(registrar_pago)
+pagos_bp.route('', methods=['GET'])(obtener_pagos) 
+pagos_bp.route('', methods=['POST'])(registrar_pago) 
 
 # Rutas para ventas
 # Ruta para registrar una nueva venta
@@ -72,8 +72,8 @@ calculadora_bp.route("/calcular", methods=["POST"])(calcular_precio)
 
 #Rutas para pagos
 #Ruta para obtener todos los pagos
-pagos_bp = Blueprint('pagos', __name__, url_prefix='/api/pagos')
-pagos_bp.route('', methods=['POST'])(registrar_pago)
+# pagos_bp = Blueprint('pagos', __name__, url_prefix='/api/pagos')
+# pagos_bp.route('', methods=['POST'])(registrar_pago)
 
 
 
