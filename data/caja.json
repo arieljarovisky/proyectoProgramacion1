@@ -22,6 +22,13 @@
       "monto": 97000,
       "descripcion": "Venta #3",
       "fecha": "2025-06-22 01:05:04"
+    },
+    {
+      "id": "e9cfcee8-2255-476e-b2d8-b8d91a7a8b68",
+      "tipo": "ingreso",
+      "monto": 0,
+      "descripcion": "Venta #4",
+      "fecha": "2025-06-22 01:51:32"
     }
   ]
 }

@@ -31,6 +31,7 @@ pagos_bp.route('', methods=['POST'])(registrar_pago)
 ventas_bp.route("/compras", methods=["POST"])(registrar_venta)
 # Ruta para obtener todas las ventas
 ventas_bp.route("/compras", methods=["GET"])(obtener_ventas)
+ventas_bp.route('', methods=['GET'])(obtener_ventas)
 # Ruta para editar las ventas
 ventas_bp.route('/<int:id>', methods=['PUT'])(actualizar_venta)
 # Ruta para eliminar ventas

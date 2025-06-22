@@ -23,6 +23,10 @@ def registrar_venta():
     data = request.get_json()
     if not data or "items" not in data or not isinstance(data["items"], list):
         return jsonify({"error": "Datos inválidos"}), 400
+    
+    # No permitimos lista vacía de items
+    if len(data["items"]) == 0:
+        return jsonify({"error": "No se puede registrar una venta sin items"}), 400
 
     # Cargamos los productos
     productos = cargar_productos()
