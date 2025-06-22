@@ -1,13 +1,27 @@
+"""
+Controlador para la gestión CRUD de productos en el sistema.
+Todas las operaciones usan un archivo JSON como base de datos liviana.
+
+Términos clave:
+- CRUD: Sigla en inglés para Create (crear), Read (leer), Update (actualizar) y Delete (eliminar).
+- JSON: Formato de archivo ligero, ideal para persistencia de datos estructurados de forma sencilla.
+"""
+
 import json
 import os
 from flask import jsonify, request
-
 
 # Ruta del archivo de productos
 PRODUCTOS_FILE = 'data/productos.json'
 
 def cargar_productos():
-    """Carga los productos desde el archivo JSON."""
+    """
+    Carga la lista de productos desde el archivo JSON.
+    Si el archivo no existe, lo crea vacío.
+
+    Returns:
+        list: Lista de productos, cada uno representado como un diccionario.
+    """
     if not os.path.exists(PRODUCTOS_FILE):
         with open(PRODUCTOS_FILE, 'w', encoding='utf-8') as f:
             json.dump([], f)
@@ -17,17 +31,37 @@ def cargar_productos():
         return json.load(f)
 
 def obtener_productos():
-    """Devuelve la lista de productos cargados."""
+    """
+    Endpoint para obtener todos los productos registrados.
+
+    Returns:
+        Response: JSON con la lista de productos y código HTTP 200.
+    """
     productos = cargar_productos()
     return jsonify(productos), 200
 
 def guardar_productos(productos):
-    """Guarda la lista de productos en el archivo JSON."""
+    """
+    Guarda la lista completa de productos en el archivo JSON.
+
+    Args:
+        productos (list): Lista de productos a persistir.
+    """
     with open(PRODUCTOS_FILE, 'w', encoding='utf-8') as f:
         json.dump(productos, f, indent=2)
 
 def registrar_producto():
-    """Registra un nuevo producto enviado por POST."""
+    """
+    Endpoint para registrar (crear) un nuevo producto.
+
+    Flujo:
+    1. Valida los datos requeridos en el request.
+    2. Genera un nuevo ID único incremental.
+    3. Agrega el producto a la lista y guarda.
+
+    Returns:
+        Response: JSON con mensaje de éxito y el ID asignado, o error.
+    """
     data = request.get_json()
 
     if not data or 'nombre' not in data or 'precio' not in data or 'stock' not in data:
@@ -53,24 +87,47 @@ def registrar_producto():
     }), 201
     
 def eliminar_producto(id):
-    productos=cargar_productos()
-    productos_filtrados=list(filter(lambda producto:producto["id"]!=id, productos))
+    """
+    Endpoint para eliminar un producto por ID.
 
-    if len(productos_filtrados)==len(productos):
+    Args:
+        id (int): ID del producto a eliminar.
+
+    Returns:
+        Response: Mensaje de éxito si lo elimina, o error si no lo encuentra.
+    """
+    productos = cargar_productos()
+    productos_filtrados = list(filter(lambda producto: producto["id"] != id, productos))
+
+    if len(productos_filtrados) == len(productos):
         return jsonify({"error": "Producto no encontrado"}), 404
     
     guardar_productos(productos_filtrados)
     return jsonify({"message": "Producto eliminado correctamente"}), 200
 
 def editar_producto(id):
+    """
+    Endpoint para editar los datos de un producto.
+
+    Args:
+        id (int): ID del producto a editar.
+
+    Flujo:
+        - Busca el producto por ID.
+        - Actualiza solo los campos presentes en el request.
+        - Guarda la lista de productos.
+
+    Returns:
+        Response: Mensaje de éxito o error.
+    """
     productos  = cargar_productos()
     data = request.get_json()
     
-    producto_encontrado =  next((producto for producto in productos if producto["id"] == id), None)
+    producto_encontrado = next((producto for producto in productos if producto["id"] == id), None)
     if producto_encontrado is None:
         return jsonify({"error": "Producto no encontrado"}), 404
     
-    # Actualizamos los campos que vienen en la solicitud
+    # Actualizamos solo los campos enviados
     producto_encontrado["nombre"] = data.get("nombre", producto_encontrado["nombre"])
     producto_encontrado["descripcion"] = data.get("descripcion", producto_encontrado["descripcion"])
     producto_encontrado["precio"] = data.get("precio", producto_encontrado["precio"])

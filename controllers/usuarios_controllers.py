@@ -1,11 +1,31 @@
+"""
+Controlador para el manejo CRUD y autenticación de usuarios en el sistema.
+
+Conceptos clave:
+- CRUD: Crear, Leer, Actualizar, Eliminar.
+- Autenticación: Verifica si el usuario y contraseña existen en la base.
+- JSON: Se usa como base de datos ligera para almacenar usuarios.
+
+Notas de seguridad:
+- En este proyecto las contraseñas se almacenan en texto plano ya que es solo con propósitos educativos.
+- **NUNCA** almacenar contraseñas en texto plano en producción. Usar SIEMPRE  un hash seguro como bcrypt o similar.
+"""
+
 from flask import request, jsonify
 import json
 import os
 
+# Ruta al archivo donde se almacenan los usuarios en formato JSON
 USUARIOS_FILE = 'data/usuarios.json'
 
-# Cargar usuarios
 def cargar_usuarios():
+    """
+    Carga la lista de usuarios desde el archivo JSON.
+    Si no existe, lo crea con una lista vacía.
+
+    Returns:
+        list: Lista de usuarios (cada uno es un dict).
+    """
     if not os.path.exists(USUARIOS_FILE):
         with open(USUARIOS_FILE, 'w') as f:
             json.dump({"usuarios": []}, f, indent=2)
@@ -15,13 +35,28 @@ def cargar_usuarios():
         data = json.load(f)
         return data.get("usuarios", [])
 
-# Guardar usuarios
 def guardar_usuarios(usuarios):
+    """
+    Guarda la lista de usuarios en el archivo JSON.
+
+    Args:
+        usuarios (list): Lista de usuarios.
+    """
     with open(USUARIOS_FILE, 'w') as f:
         json.dump({"usuarios": usuarios}, f, indent=2)
 
-# Registrar un nuevo usuario
 def registrar_usuario():
+    """
+    Endpoint para registrar un nuevo usuario.
+
+    Validaciones:
+    - Nombre, email y contraseña no vacíos.
+    - Email debe tener '@'.
+    - Email no repetido en la base.
+
+    Returns:
+        Response: Mensaje de éxito y usuario creado, o error.
+    """
     data = request.get_json()
 
     nombre = data.get('nombre', '').strip().lower()
@@ -46,7 +81,8 @@ def registrar_usuario():
         "id": nuevo_id,
         "nombre": nombre,
         "email": email,
-        "password": contrasena
+        "password": contrasena,
+        # "rol": "admin"  # <- Podrías agregar rol por defecto si lo necesitás
     }
 
     usuarios.append(nuevo_usuario)
@@ -58,16 +94,29 @@ def registrar_usuario():
         "email": nuevo_usuario["email"]
     }}), 201
 
-# Obtener todos los usuarios
 def obtener_usuarios():
+    """
+    Endpoint para obtener todos los usuarios registrados.
+
+    Returns:
+        Response: Lista de usuarios (sin password), código 200.
+    """
     usuarios = cargar_usuarios()
     usuarios_formateados = [
         {"id": u["id"], "nombre": u["nombre"], "email": u["email"]} for u in usuarios
     ]
     return jsonify(usuarios_formateados), 200
 
-# Actualizar usuario
 def actualizar_usuario(usuario_id):
+    """
+    Endpoint para actualizar los datos de un usuario por ID.
+
+    Args:
+        usuario_id (int): ID del usuario a actualizar.
+
+    Returns:
+        Response: Usuario actualizado o mensaje de error.
+    """
     data = request.get_json()
     usuarios = cargar_usuarios()
 
@@ -85,8 +134,16 @@ def actualizar_usuario(usuario_id):
 
     return jsonify({"error": "Usuario no encontrado"}), 404
 
-# Eliminar usuario
 def eliminar_usuario(usuario_id):
+    """
+    Endpoint para eliminar un usuario por ID.
+
+    Args:
+        usuario_id (int): ID del usuario a eliminar.
+
+    Returns:
+        Response: Mensaje de éxito o error si no lo encuentra.
+    """
     usuarios = cargar_usuarios()
     nuevos_usuarios = [u for u in usuarios if u["id"] != usuario_id]
 
@@ -96,8 +153,18 @@ def eliminar_usuario(usuario_id):
     guardar_usuarios(nuevos_usuarios)
     return jsonify({"message": "Usuario eliminado"}), 200
 
-# Login de usuario
 def login_usuario():
+    """
+    Endpoint de login (autenticación de usuario).
+
+    Validaciones:
+    - Email y contraseña no vacíos.
+    - Email debe contener '@'.
+    - Compara email y contraseña contra los datos guardados.
+
+    Returns:
+        Response: Mensaje de login exitoso (y datos del usuario, excepto contraseña) o error.
+    """
     data = request.get_json()
 
     email = data.get('email', '').strip().lower()
@@ -112,11 +179,12 @@ def login_usuario():
     usuarios = cargar_usuarios()
     for u in usuarios:
         if u["email"] == email and u["password"] == contrasena:
+            # Incluí el campo "rol" si lo tuvieras en la estructura de usuario.
             return jsonify({"message": "Login exitoso", "usuario": {
                 "id": u["id"],
                 "nombre": u["nombre"],
                 "email": u["email"],
-                "rol": u["rol"]
+                "rol": u.get("rol", "admin")  # Valor por defecto si no está el campo.
             }}), 200
 
     return jsonify({"error": "Usuario no encontrado o credenciales inválidas"}), 401

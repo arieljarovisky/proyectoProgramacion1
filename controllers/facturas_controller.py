@@ -1,3 +1,13 @@
+"""
+Controlador para la gestión de facturas electrónicas y generación de PDFs en la aplicación.
+
+Términos clave:
+- Factura: Comprobante que documenta una transacción de venta de bienes o servicios.
+- PDF: Formato de archivo portátil para representar documentos, ideal para facturas.
+- reportlab: Librería de Python para generar PDFs de forma programática.
+- Controller: Se encarga de la lógica asociada a la generación y almacenamiento de facturas.
+"""
+
 from flask import jsonify, request
 import json, os
 from datetime import datetime
@@ -14,6 +24,13 @@ PDF_DIR = "data/facturas_pdf"
 
 
 def cargar_facturas():
+    """
+    Carga todas las facturas desde el archivo JSON.
+    Si el archivo no existe, lo crea con una lista vacía.
+
+    Returns:
+        list: Lista de facturas almacenadas.
+    """
     if not os.path.exists(FACTURAS_FILE):
         os.makedirs(os.path.dirname(FACTURAS_FILE), exist_ok=True)
         with open(FACTURAS_FILE, "w") as f:
@@ -23,11 +40,24 @@ def cargar_facturas():
 
 
 def guardar_facturas(facturas):
+    """
+    Guarda la lista de facturas en el archivo JSON.
+
+    Args:
+        facturas (list): Lista de facturas a guardar.
+    """
     with open(FACTURAS_FILE, "w", encoding="utf-8") as f:
         json.dump(facturas, f, indent=2, ensure_ascii=False)
 
 
 def cargar_ventas():
+    """
+    Carga todas las ventas desde el archivo JSON.
+    Si el archivo no existe, retorna una lista vacía.
+
+    Returns:
+        list: Lista de ventas almacenadas.
+    """
     if not os.path.exists(VENTAS_FILE):
         return []
     with open(VENTAS_FILE, "r", encoding="utf-8") as f:
@@ -35,6 +65,16 @@ def cargar_ventas():
 
 
 def generar_id_factura(facturas):
+    """
+    Genera un ID único para la nueva factura basado en el año, mes y cantidad de facturas
+    existentes en el mes actual. Ejemplo: FAC-2025-06-001.
+
+    Args:
+        facturas (list): Lista de facturas existentes.
+
+    Returns:
+        str: ID generado para la factura.
+    """
     ahora = datetime.now()
     año_mes = ahora.strftime("%Y-%m")
     correlativos = [f for f in facturas if f["id"].startswith(f"FAC-{año_mes}")]
@@ -43,6 +83,15 @@ def generar_id_factura(facturas):
 
 
 def generar_pdf_factura(factura):
+    """
+    Genera un archivo PDF con los datos de la factura recibida utilizando la librería reportlab.
+
+    Args:
+        factura (dict): Datos de la factura (cliente, fecha, items, total, etc.).
+
+    Returns:
+        str: Ruta del archivo PDF generado.
+    """
     os.makedirs(PDF_DIR, exist_ok=True)
     pdf_path = os.path.join(PDF_DIR, f"{factura['id']}.pdf")
 
@@ -119,6 +168,14 @@ def generar_pdf_factura(factura):
 
 
 def generar_factura():
+    """
+    Endpoint para generar una nueva factura a partir de una venta existente.
+    Recibe los datos por POST (venta_id y cliente), busca la venta, crea una nueva factura,
+    guarda el PDF, actualiza la caja y retorna los datos de la factura.
+
+    Returns:
+        Response: JSON con los datos de la factura y ruta del PDF.
+    """
     data = request.get_json()
     print(data)
     venta_id = data.get("venta_id")
@@ -150,6 +207,7 @@ def generar_factura():
     guardar_facturas(facturas)
     pdf_path = generar_pdf_factura(nueva_factura)
 
+    # Asociar la factura al movimiento correspondiente en la caja
     caja = cargar_caja()
     for movimiento in caja["movimientos"]:
         if movimiento.get("id") == venta_id:
@@ -170,4 +228,13 @@ def generar_factura():
 
 
 def descargar_pdf(nombre_archivo):
+    """
+    Endpoint para descargar un archivo PDF de factura desde el directorio correspondiente.
+
+    Args:
+        nombre_archivo (str): Nombre del archivo PDF a descargar.
+
+    Returns:
+        Response: Envío del archivo PDF como respuesta HTTP.
+    """
     return send_from_directory(PDF_DIR, nombre_archivo, as_attachment=False)

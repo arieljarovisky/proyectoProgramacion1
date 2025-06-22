@@ -1,3 +1,23 @@
+"""
+Controlador para operaciones relacionadas con la caja (saldo, ingresos, egresos, movimientos).
+
+Términos clave:
+- Controller: Archivo encargado de la lógica para cada endpoint; conecta las rutas (routes) con las operaciones sobre los datos.
+- JSON: Formato estándar para intercambiar datos. Acá usamos archivos JSON como base de datos sencilla.
+- Saldo: Monto total disponible en la caja.
+- Movimiento: Registro de una operación de ingreso o egreso en la caja.
+- Ingreso: Entrada de dinero.
+- Egreso: Salida de dinero.
+- UUID: Identificador único universal, usado para asignar un ID a cada movimiento.
+
+Funciones principales:
+- cargar_caja: Lee el archivo de caja y lo devuelve como diccionario.
+- guardar_caja: Guarda el estado de la caja en disco.
+- obtener_caja: Devuelve el estado actual de la caja por API.
+- registrar_ingreso: Agrega un ingreso (entrada de dinero) a la caja.
+- registrar_egreso: Agrega un egreso (salida de dinero) a la caja.
+"""
+
 from flask import jsonify, request
 import json
 import os
@@ -6,8 +26,15 @@ from datetime import datetime
 
 CAJA_FILE = "data/caja.json"
 
-# ---------- Utilidades ----------
+# ---------- Utilidades de persistencia ----------
+
 def cargar_caja():
+    """
+    Lee y retorna el estado actual de la caja desde el archivo JSON.
+    Si el archivo no existe, lo crea con saldo 0 y sin movimientos.
+    Returns:
+        dict: Estado actual de la caja (saldo y movimientos).
+    """
     if not os.path.exists(CAJA_FILE):
         with open(CAJA_FILE, "w") as f:
             json.dump({"saldo": 0, "movimientos": []}, f)
@@ -17,15 +44,37 @@ def cargar_caja():
         return json.load(f)
 
 def guardar_caja(caja):
+    """
+    Guarda el estado actual de la caja en el archivo JSON.
+
+    Args:
+        caja (dict): Estado de la caja a guardar.
+    """
     with open(CAJA_FILE, "w", encoding="utf-8") as f:
         json.dump(caja, f, indent=2, ensure_ascii=False)
 
+# ---------- Endpoints (API) ----------
 
 def obtener_caja():
+    """
+    Devuelve el estado actual de la caja (saldo y movimientos) vía API.
+
+    Returns:
+        tuple: (json, status_code)
+    """
     caja = cargar_caja()
     return jsonify(caja), 200
 
 def registrar_ingreso():
+    """
+    Registra un ingreso de dinero en la caja.
+
+    Espera un JSON con al menos 'total' y 'descripcion'.
+    Suma el monto al saldo, agrega un movimiento de tipo 'ingreso' y guarda la caja.
+
+    Returns:
+        tuple: (json, status_code)
+    """
     data = request.get_json()
     print(data)
     if not data or "total" not in data or "descripcion" not in data:
@@ -42,10 +91,10 @@ def registrar_ingreso():
 
     caja["saldo"] += monto
     caja["movimientos"].append({
-        "id": str(uuid.uuid4()),  # <--- agregá esto
+        "id": str(uuid.uuid4()),  # ID único para el movimiento
         "tipo": "ingreso",
         "monto": monto,
-        "descripcion": f"Venta #{data["descripcion"]}",
+        "descripcion": f"Venta #{data['descripcion']}",
         "fecha":  datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     })
     guardar_caja(caja)
@@ -53,6 +102,16 @@ def registrar_ingreso():
     return jsonify({"message": "Ingreso registrado correctamente"}), 201
 
 def registrar_egreso():
+    """
+    Registra un egreso de dinero en la caja.
+
+    Espera un JSON con al menos 'total' y 'descripcion'.
+    Resta el monto al saldo (puede ser negativo), agrega un movimiento de tipo 'egreso' y guarda la caja.
+    Permite agregar detalles adicionales (destinatario, concepto, método de pago) si están presentes.
+
+    Returns:
+        tuple: (json, status_code)
+    """
     data = request.get_json()
     campos = ["descripcion", "total"]
 
@@ -76,11 +135,12 @@ def registrar_egreso():
         "fecha": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     }
 
+    # Detalles extra: destinatario, concepto, método (si están presentes)
     detalles = {k: data[k] for k in ["destinatario", "concepto", "metodo"] if k in data}
     if detalles:
         egreso["detalles"] = detalles
 
-    caja["saldo"] -= monto  # ✅ Permite saldo negativo
+    caja["saldo"] -= monto  # Permite saldo negativo (egreso mayor al saldo actual)
     caja["movimientos"].append(egreso)
     guardar_caja(caja)
 
