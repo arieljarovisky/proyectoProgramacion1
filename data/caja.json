@@ -1,5 +1,5 @@
 {
-  "saldo": 307000,
+  "saldo": -343000.0,
   "movimientos": [
     {
       "id": "0af025cd-d19a-43cc-8a29-d85c40e12ac5",
@@ -29,6 +29,30 @@
       "monto": 0,
       "descripcion": "Venta #4",
       "fecha": "2025-06-22 01:51:32"
+    },
+    {
+      "id": "1",
+      "tipo": "egreso",
+      "monto": 150000.0,
+      "descripcion": "Compra de mercaderia",
+      "fecha": "2025-06-02 00:00:00",
+      "detalles": {
+        "destinatario": "Textil SA",
+        "concepto": "proveedor",
+        "metodo": "transferencia"
+      }
+    },
+    {
+      "id": "2",
+      "tipo": "egreso",
+      "monto": 500000.0,
+      "descripcion": "Pago alquiler de Junio",
+      "fecha": "2025-06-22 02:45:07",
+      "detalles": {
+        "destinatario": "ABC Inmobiliaria",
+        "concepto": "alquiler",
+        "metodo": "transferencia"
+      }
     }
   ]
 }

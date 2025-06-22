@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "id": "1",
+    "fecha": "2025-06-02 00:00:00",
+    "destinatario": "Textil SA",
+    "concepto": "proveedor",
+    "descripcion": "Compra de mercaderia",
+    "monto": 150000.0,
+    "metodo": "transferencia"
+  },
+  {
+    "id": "2",
+    "fecha": "2025-06-22 02:45:07",
+    "destinatario": "ABC Inmobiliaria",
+    "concepto": "alquiler",
+    "descripcion": "Pago alquiler de Junio",
+    "monto": 500000.0,
+    "metodo": "transferencia"
+  }
+]
