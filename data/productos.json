@@ -3,7 +3,7 @@
     "id": 1,
     "nombre": "Nuevo nombre del producto",
     "descripcion": "Remera de algod\u00f3n 100% con corte amplio",
-    "precio": "15000",
+    "precio": 15000,
     "stock": 8,
     "categoria": "Indumentaria",
     "talle": "\u00danico"
