@@ -1,3 +1,34 @@
+"""
+Este archivo implementa la lógica de control de caja en la aplicación Flask de Caja Plus.
+
+Incluye:
+- Lectura y escritura del archivo `caja.json`, donde se guarda el saldo actual y el historial de movimientos.
+- Registro de ingresos y egresos con validaciones y estructura uniforme.
+- Endpoint para obtener el estado actual de la caja en formato JSON.
+
+Funciones principales:
+- `cargar_caja()`: carga el estado actual de la caja desde el archivo; si no existe, lo inicializa.
+- `guardar_caja(caja)`: guarda los datos actualizados de la caja en el archivo.
+- `obtener_caja()`: endpoint GET que devuelve el saldo y los movimientos.
+- `registrar_ingreso()`: endpoint POST para registrar un ingreso por venta.
+- `registrar_egreso()`: endpoint POST para registrar un egreso, con soporte para detalles opcionales.
+
+Características:
+- Los movimientos se registran con un ID único (`uuid4`), fecha y descripción.
+- El campo `descripcion` puede incluir número de venta o detalle de gasto.
+- Se permite saldo negativo en caja al registrar egresos.
+- Los movimientos se guardan cronológicamente dentro del array `movimientos`.
+
+Archivos utilizados:
+- `caja.json`: contiene el estado financiero de la caja (`saldo` + lista de `movimientos`).
+
+Librerías utilizadas:
+- `Flask`: para manejar peticiones HTTP (`request`, `jsonify`).
+- `json`, `os`: para manejo de archivos.
+- `uuid`: para generar identificadores únicos.
+- `datetime`: para generar timestamps con la fecha y hora actual.
+"""
+
 from flask import jsonify, request
 import json
 import os

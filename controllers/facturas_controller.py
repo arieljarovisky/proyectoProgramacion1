@@ -1,3 +1,26 @@
+"""
+Este archivo implementa la lógica para la gestión de facturas en la aplicación Flask de Caja Plus.
+
+Incluye:
+- Funciones para cargar y guardar facturas desde un archivo JSON (`facturas.json`).
+- Generación automática de IDs de factura únicos por mes (`FAC-YYYY-MM-XXX`).
+- Generación de facturas en formato PDF con diseño profesional usando ReportLab.
+- Asociación entre una factura y su venta correspondiente.
+- Actualización del archivo de caja para vincular ventas facturadas.
+- Endpoint para generar una nueva factura a partir de una venta registrada.
+- Endpoint para descargar el archivo PDF generado.
+
+Archivos involucrados:
+- `facturas.json`: almacena la información de las facturas generadas.
+- `ventas.json`: contiene las ventas registradas, de donde se extraen los datos para la factura.
+- `facturas_pdf/`: carpeta donde se guardan los archivos PDF generados.
+
+Librerías utilizadas:
+- `Flask`: para manejo de peticiones HTTP (`request`, `jsonify`) y envío de archivos (`send_from_directory`).
+- `os`, `json`, `datetime`: para manejo de archivos, datos y fechas.
+- `reportlab`: para crear facturas en formato PDF con estilo personalizado.
+"""
+
 from flask import jsonify, request
 import json, os
 from datetime import datetime
