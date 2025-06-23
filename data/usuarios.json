@@ -2,30 +2,23 @@
   "usuarios": [
     {
       "id": 1,
-      "nombre": "juan",
-      "email": "juan@example.com",
-      "password": "1234",
+      "nombre": "Andres Cecconi",
+      "email": "andrescecconi@admin.com",
+      "password": "cajaplus",
       "rol": "admin"
     },
     {
       "id": 2,
-      "nombre": "sofia",
-      "email": "sofia@example.com",
-      "password": "abcd",
-      "rol": "empleado"
+      "nombre": "Ariel Jarovisky",
+      "email": "arieljarovisky@admin.com",
+      "password": "cajaplus",
+      "rol": "admin"
     },
     {
       "id": 3,
-      "nombre": "mario",
-      "email": "mario@example.com",
-      "password": "password",
-      "rol": "empleado"
-    },
-    {
-      "id": 4,
-      "nombre": "nacho",
-      "email": "nacho@example.com",
-      "password": "123456789",
+      "nombre": "Ignacio Ganci",
+      "email": "ignacioganci@empleado.com",
+      "password": "cajaplus",
       "rol": "empleado"
     }
   ]
