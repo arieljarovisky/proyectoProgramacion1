@@ -1,3 +1,14 @@
+"""
+Este archivo define un conjunto de pruebas automatizadas usando pytest
+para verificar el correcto funcionamiento de los endpoints relacionados con ventas
+en la aplicación Flask de Caja Plus.
+
+Incluye:
+- Un fixture `client` para simular peticiones HTTP.
+- Un test para validar la respuesta del endpoint GET /api/ventas.
+- Un test para verificar que no se permite registrar una venta sin items.
+"""
+
 # Importa el módulo pytest, utilizado para realizar pruebas unitarias
 import pytest
 
@@ -13,7 +24,7 @@ def client():
     Activa el modo TESTING, que desactiva ciertas funcionalidades (como errores reales).
     """
     app.config["TESTING"] = True  # Configura la app en modo testing
-    return app.test_client()      # Retorna el cliente de prueba
+    return app.test_client()      # Retorna el cliente de prueba para usar en los tests
 
 # ---------- TEST 1 ----------
 
@@ -36,7 +47,7 @@ def test_registrar_venta_sin_items(client):
     - Devuelva HTTP 400 si se intenta registrar una venta sin items.
     - Incluya un mensaje de error en el JSON de respuesta.
     """
-    resp = client.post("/api/ventas/compras", json={"items": []})  # Envía una lista vacía
-    assert resp.status_code == 400         # Se espera error 400
-    data = resp.get_json()                 # Se obtiene la respuesta
-    assert "error" in data                 # Se verifica que exista un mensaje de error
+    resp = client.post("/api/ventas/compras", json={"items": []})  # Envía una lista vacía como venta
+    assert resp.status_code == 400         # Se espera error 400 por datos inválidos
+    data = resp.get_json()                 # Se obtiene la respuesta del servidor
+    assert "error" in data                 # Se verifica que el mensaje de error esté presente
