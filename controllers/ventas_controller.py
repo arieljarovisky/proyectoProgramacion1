@@ -72,23 +72,43 @@ def registrar_venta():
     if len(data["items"]) == 0:
         return jsonify({"error": "No se puede registrar una venta sin items"}), 400
 
+    # Validamos el método de pago
+    metodo_pago = data.get("metodoPago") or data.get("metodo_pago")
+    if not metodo_pago or not isinstance(metodo_pago, str) or not metodo_pago.strip():
+        return jsonify({"error": "Debe seleccionar un método de pago"}), 400
+    
     # Cargamos los productos
     productos = cargar_productos()
     items_detallados = []
 
     # Validamos y armamos el detalle
     for item in data["items"]:
+        # Validar existencia y tipo de id/cantidad
+        if "id" not in item or "cantidad" not in item:
+            return jsonify({"error": "Falta el id o la cantidad de un producto"}), 400
+        try:
+            cantidad = int(item["cantidad"])
+        except Exception:
+            return jsonify({"error": "La cantidad debe ser un número entero"}), 400
+        if cantidad <= 0:
+            return jsonify({"error": "La cantidad de cada producto debe ser mayor a 0"}), 400
+
+        # Buscar producto y validar stock
         prod = next((p for p in productos if str(p["id"]) == str(item["id"])), None)
         if not prod:
             return jsonify({"error": f"Producto con id {item['id']} no encontrado"}), 404
+        if prod.get("stock", 0) < cantidad:
+            return jsonify({"error": f"Stock insuficiente para el producto '{prod.get('nombre', 'Producto')}'. Stock disponible: {prod.get('stock', 0)}"}), 400
+        if prod.get("precio", 0) <= 0:
+            return jsonify({"error": f"Precio inválido para el producto '{prod.get('nombre', 'Producto')}'."}), 400
 
         items_detallados.append({
             "id": item["id"],
             "nombre": prod.get("nombre", "Producto"),
-            "cantidad": item["cantidad"],
+            "cantidad": cantidad,
             "precio_unitario": prod["precio"]
         })
-
+        
     # Calculamos el total y armamos la venta
     total = sum(i["cantidad"] * i["precio_unitario"] for i in items_detallados)
     venta_id = str(uuid.uuid4())
@@ -98,7 +118,8 @@ def registrar_venta():
         "id": venta_id,
         "items": items_detallados,
         "total": total,
-        "fecha": fecha_actual
+        "fecha": fecha_actual,
+        "metodoPago": metodo_pago
     }
 
     # Guardamos la venta
@@ -117,8 +138,8 @@ def registrar_venta():
         "fecha": fecha_actual
     }
 
-    caja["saldo"] += total
-    caja["movimientos"].append(nuevo_ingreso)
+    caja["saldo"] += total #Sumamos el monto al saldo de la caja
+    caja["movimientos"].append(nuevo_ingreso) #Agregamos el nuevo movimiento
     guardar_caja(caja)
     
     # Actualizamos el stock en productos.json
