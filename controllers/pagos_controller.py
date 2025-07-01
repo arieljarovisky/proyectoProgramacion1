@@ -75,8 +75,14 @@ def registrar_pago():
     campos_requeridos = ["destinatario", "concepto", "descripcion", "monto", "metodo"]
 
     # 1) Validar campos obligatorios
-    if not data or not all(campo in data and data[campo] for campo in campos_requeridos):
-        return jsonify({"error": "Faltan campos requeridos"}), 400
+    for campo in campos_requeridos:
+        if campo not in data or not isinstance(data[campo], str) or not data[campo].strip():
+            if campo == "monto":  # Excepción para el monto (puede venir como número)
+                if campo not in data or str(data[campo]).strip() == "":
+                    return jsonify({"error": "Faltan campos requeridos"}), 400
+            else:
+                return jsonify({"error": f"El campo '{campo}' es obligatorio y no puede estar vacío"}), 400
+
 
     # 2) Validar y parsear monto
     try:
@@ -86,7 +92,7 @@ def registrar_pago():
     except Exception:
         return jsonify({"error": "El monto no es válido"}), 400
 
-    # 3) Parsear fecha si viene, o usar ahora
+    # 3) Parsear fecha si viene, o usar ahora. NO PERMITIR FECHAS FUTURAS
     fecha_input = data.get("fecha")
     if fecha_input:
         fecha_str = fecha_input.strip()
@@ -108,6 +114,10 @@ def registrar_pago():
                     return jsonify({
                         "error": "Formato de fecha inválido. Acepto YYYY-MM-DD, DD/MM/YYYY o MM/DD/YYYY"
                     }), 400
+                    
+        # Validar que la fecha no sea futura
+        if dt.date() > datetime.now().date():
+            return jsonify({"error": "No se permiten fechas futuras"}), 400
         fecha_pago = dt.strftime("%Y-%m-%d %H:%M:%S")
     else:
         fecha_pago = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -117,14 +127,15 @@ def registrar_pago():
     nuevo_pago = {
         "id": str(len(pagos) + 1),
         "fecha": fecha_pago,
-        "destinatario": data["destinatario"],
-        "concepto": data["concepto"],
-        "descripcion": data["descripcion"],
+        "destinatario": data["destinatario"].strip(),
+        "concepto": data["concepto"].strip(),
+        "descripcion": data["descripcion"].strip(),
         "monto": monto,
-        "metodo": data["metodo"],
+        "metodo": data["metodo"].strip(),
     }
     pagos.append(nuevo_pago)
     guardar_pagos(pagos)
+
 
     # 5) Registrar egreso en caja.json (sincronización)
     caja = cargar_caja()
@@ -132,12 +143,12 @@ def registrar_pago():
         "id": nuevo_pago["id"],
         "tipo": "egreso",
         "monto": monto,
-        "descripcion": data["descripcion"],
+        "descripcion": data["descripcion"].strip(),
         "fecha": fecha_pago,
         "detalles": {
-            "destinatario": data["destinatario"],
-            "concepto": data["concepto"],
-            "metodo": data["metodo"],
+            "destinatario": data["destinatario"].strip(),
+            "concepto": data["concepto"].strip(),
+            "metodo": data["metodo"].strip(),
         },
     }
     caja["saldo"] -= monto
