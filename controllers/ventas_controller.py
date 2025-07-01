@@ -1,6 +1,4 @@
 """
-ventas_controller.py
-
 Controlador para operaciones de ventas del sistema Caja Plus.
 
 Responsabilidades principales:
