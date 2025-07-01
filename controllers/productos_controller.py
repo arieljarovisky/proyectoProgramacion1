@@ -53,28 +53,34 @@ def guardar_productos(productos):
 def registrar_producto():
     """
     Endpoint para registrar (crear) un nuevo producto.
-
-    Flujo:
-    1. Valida los datos requeridos en el request.
-    2. Genera un nuevo ID único incremental.
-    3. Agrega el producto a la lista y guarda.
-
-    Returns:
-        Response: JSON con mensaje de éxito y el ID asignado, o error.
+    Agrega validaciones estrictas en los datos recibidos.
     """
     data = request.get_json()
 
+    # Validar existencia de campos obligatorios
     if not data or 'nombre' not in data or 'precio' not in data or 'stock' not in data:
         return jsonify({"error": "Datos incompletos"}), 400
+
+    nombre = data['nombre']
+    precio = data['precio']
+    stock = data['stock']
+
+    # Validaciones específicas
+    if not isinstance(nombre, str) or not nombre.strip():
+        return jsonify({"error": "El nombre es obligatorio"}), 400
+    if not (isinstance(precio, (int, float)) and precio > 0):
+        return jsonify({"error": "El precio debe ser un número positivo"}), 400
+    if not (isinstance(stock, int) and stock >= 0):
+        return jsonify({"error": "El stock debe ser un entero mayor o igual a 0"}), 400
 
     productos = cargar_productos()
 
     nuevo_producto = {
         "id": len(productos) + 1,
-        "nombre": data['nombre'],
+        "nombre": nombre.strip(),
         "descripcion": data.get('descripcion', ''),
-        "precio": data['precio'],
-        "stock": data['stock'],
+        "precio": precio,
+        "stock": stock,
         "categoria": data.get('categoria', 'Sin categoría')
     }
 
@@ -108,17 +114,7 @@ def eliminar_producto(id):
 def editar_producto(id):
     """
     Endpoint para editar los datos de un producto.
-
-    Args:
-        id (int): ID del producto a editar.
-
-    Flujo:
-        - Busca el producto por ID.
-        - Actualiza solo los campos presentes en el request.
-        - Guarda la lista de productos.
-
-    Returns:
-        Response: Mensaje de éxito o error.
+    Suma validaciones estrictas en los campos editados.
     """
     productos  = cargar_productos()
     data = request.get_json()
@@ -127,7 +123,18 @@ def editar_producto(id):
     if producto_encontrado is None:
         return jsonify({"error": "Producto no encontrado"}), 404
     
-    # Actualizamos solo los campos enviados
+    # Validar nombre, precio y stock solo si vienen en el request
+    if "nombre" in data:
+        if not isinstance(data["nombre"], str) or not data["nombre"].strip():
+            return jsonify({"error": "El nombre es obligatorio"}), 400
+    if "precio" in data:
+        if not (isinstance(data["precio"], (int, float)) and data["precio"] > 0):
+            return jsonify({"error": "El precio debe ser un número positivo"}), 400
+    if "stock" in data:
+        if not (isinstance(data["stock"], int) and data["stock"] >= 0):
+            return jsonify({"error": "El stock debe ser un entero mayor o igual a 0"}), 400
+
+    # Actualizamos solo los campos enviados (ya validados)
     producto_encontrado["nombre"] = data.get("nombre", producto_encontrado["nombre"])
     producto_encontrado["descripcion"] = data.get("descripcion", producto_encontrado["descripcion"])
     producto_encontrado["precio"] = data.get("precio", producto_encontrado["precio"])
