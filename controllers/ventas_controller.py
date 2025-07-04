@@ -161,7 +161,26 @@ def obtener_ventas():
         Response: Lista de ventas y status 200.
     """
     ventas = cargar_ventas()
-    return jsonify(ventas), 200
+    # --- Paginación ---
+    try:
+        page = int(request.args.get("page", 1))
+        per_page = int(request.args.get("per_page", 10))
+    except Exception:
+        page = 1
+        per_page = 10
+
+    total = len(ventas)
+    start = (page - 1) * per_page
+    end = start + per_page
+    ventas_paginadas = ventas[start:end]
+
+    return jsonify({
+        "ventas": ventas_paginadas,
+        "page": page,
+        "per_page": per_page,
+        "total": total,
+        "total_pages": (total + per_page - 1) // per_page
+    }), 200
 
 def actualizar_venta(id):
     """

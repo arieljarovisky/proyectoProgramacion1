@@ -63,7 +63,44 @@ def obtener_caja():
         tuple: (json, status_code)
     """
     caja = cargar_caja()
-    return jsonify(caja), 200
+    movimientos = caja.get("movimientos", [])
+    
+    # ORDENAR POR FECHA DESCENDENTE
+    try:
+        movimientos.sort(
+            key=lambda m: datetime.strptime(m['fecha'], "%Y-%m-%d %H:%M:%S"),
+            reverse=True
+        )
+    except Exception:
+        pass
+    
+    # FILTRO POR TIPO
+    tipo = request.args.get("tipo")
+    if tipo in ("ingreso", "egreso"):
+        movimientos = [m for m in movimientos if m.get("tipo") == tipo]
+    
+    # PAGINACION
+    try:
+        page = int(request.args.get("page", 1))
+        per_page = int(request.args.get("per_page", 10))
+    except Exception:
+        page = 1
+        per_page = 10
+
+    total = len(movimientos)
+    start = (page - 1) * per_page
+    end = start + per_page
+    movimientos_paginados = movimientos[start:end]
+
+    # Devuelve solo la página de movimientos pero también el saldo total
+    return jsonify({
+        "saldo": caja.get("saldo", 0),
+        "movimientos": movimientos_paginados,
+        "page": page,
+        "per_page": per_page,
+        "total": total,
+        "total_pages": (total + per_page - 1) // per_page
+    }), 200
 
 def registrar_ingreso():
     """

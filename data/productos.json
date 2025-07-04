@@ -1,14 +1,5 @@
 [
   {
-    "id": 1,
-    "nombre": "Camiseta Graphic",
-    "descripcion": "Remera de algod\u00f3n 100% con corte amplio y estampado bold",
-    "precio": 15000,
-    "stock": 39,
-    "categoria": "Indumentaria",
-    "talle": "\u00danico"
-  },
-  {
     "id": 2,
     "nombre": "Remera Oversize",
     "descripcion": "Remera de algod\u00f3n 100% con corte amplio y detalle en costuras",
@@ -22,7 +13,7 @@
     "nombre": "Buzo Skate",
     "descripcion": "Buzo de algod\u00f3n 100% con capucha ajustable y bolsillo canguro",
     "precio": 65000,
-    "stock": 45,
+    "stock": 43,
     "categoria": "Indumentaria",
     "talle": "M"
   },
@@ -31,7 +22,7 @@
     "nombre": "Buzo Street",
     "descripcion": "Buzo de algod\u00f3n grueso con logo bordado en pecho",
     "precio": 65000,
-    "stock": 38,
+    "stock": 37,
     "categoria": "Indumentaria",
     "talle": "L"
   },
@@ -40,7 +31,7 @@
     "nombre": "Buzo Overshirt Denim",
     "descripcion": "Sobrecamisa tipo overshirt de jean con bolsillos frontales",
     "precio": 72000,
-    "stock": 43,
+    "stock": 22,
     "categoria": "Indumentaria",
     "talle": "XL"
   },

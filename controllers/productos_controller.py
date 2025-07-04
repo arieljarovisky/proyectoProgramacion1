@@ -38,7 +38,36 @@ def obtener_productos():
         Response: JSON con la lista de productos y código HTTP 200.
     """
     productos = cargar_productos()
-    return jsonify(productos), 200
+    
+    
+    # --- FILTRO POR NOMBRE (search) ---
+    search = request.args.get("search", "").strip().lower()
+    if search:
+        productos = [
+            p for p in productos
+            if search in p["nombre"].lower() or search in p.get("descripcion", "").lower()
+        ]
+        
+    # --- Paginación ---
+    try:
+        page = int(request.args.get("page", 1))
+        per_page = int(request.args.get("per_page", 10))
+    except Exception:
+        page = 1
+        per_page = 10
+
+    total = len(productos)
+    start = (page - 1) * per_page
+    end = start + per_page
+    productos_paginados = productos[start:end]
+
+    return jsonify({
+        "productos": productos_paginados,
+        "page": page,
+        "per_page": per_page,
+        "total": total,
+        "total_pages": (total + per_page - 1) // per_page
+    }), 200
 
 def guardar_productos(productos):
     """

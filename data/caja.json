@@ -1,5 +1,5 @@
 {
-  "saldo": 3577000.0,
+  "saldo": 3748000.0,
   "movimientos": [
     {
       "id": "0af025cd-d19a-43cc-8a29-d85c40e12ac5",
@@ -601,6 +601,59 @@
         "concepto": "servicios",
         "metodo": "transferencia"
       }
+    },
+    {
+      "id": "a4b631f2-470c-413d-9e52-4ba98ba999aa",
+      "tipo": "ingreso",
+      "monto": 97000,
+      "descripcion": "Venta #73",
+      "fecha": "2025-07-02 11:34:24",
+      "factura_id": "FAC-2025-07-001"
+    },
+    {
+      "id": "9",
+      "tipo": "egreso",
+      "monto": 100000.0,
+      "descripcion": "mercaderia",
+      "fecha": "2025-07-02 11:36:41",
+      "detalles": {
+        "destinatario": "Textil SA",
+        "concepto": "proveedor",
+        "metodo": "efectivo"
+      }
+    },
+    {
+      "id": "0b1a7352-1246-4df9-a841-ab8cd2e837b9",
+      "tipo": "ingreso",
+      "monto": 202000,
+      "descripcion": "Venta #74",
+      "fecha": "2025-07-03 16:16:50"
+    },
+    {
+      "id": "4bb30d2f-5604-47e2-bdf1-9497da915806",
+      "tipo": "ingreso",
+      "monto": 1440000,
+      "descripcion": "Venta #75",
+      "fecha": "2025-07-03 16:17:58"
+    },
+    {
+      "id": "10",
+      "tipo": "egreso",
+      "monto": 1500000.0,
+      "descripcion": "mercaderia",
+      "fecha": "2025-07-03 17:09:01",
+      "detalles": {
+        "destinatario": "Mundo Electronico",
+        "concepto": "proveedor",
+        "metodo": "efectivo"
+      }
+    },
+    {
+      "id": "430121ab-9554-4511-b585-6d4345f936d5",
+      "tipo": "ingreso",
+      "monto": 32000,
+      "descripcion": "Venta #76",
+      "fecha": "2025-07-04 10:10:10"
     }
   ]
 }

@@ -26,5 +26,27 @@
       }
     ],
     "total": 195000
+  },
+  {
+    "id": "FAC-2025-07-001",
+    "fecha": "2025-07-02 11:34:57",
+    "cliente": "daniela mira",
+    "venta_id": "a4b631f2-470c-413d-9e52-4ba98ba999aa",
+    "precio_unitario": 0,
+    "items": [
+      {
+        "id": 2,
+        "nombre": "Remera Oversize",
+        "cantidad": 1,
+        "precio_unitario": 32000
+      },
+      {
+        "id": 3,
+        "nombre": "Buzo Skate",
+        "cantidad": 1,
+        "precio_unitario": 65000
+      }
+    ],
+    "total": 97000
   }
 ]

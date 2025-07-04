@@ -70,5 +70,23 @@
     "descripcion": "Luz Mayo-Junio",
     "monto": 210000.0,
     "metodo": "transferencia"
+  },
+  {
+    "id": "9",
+    "fecha": "2025-07-02 11:36:41",
+    "destinatario": "Textil SA",
+    "concepto": "proveedor",
+    "descripcion": "mercaderia",
+    "monto": 100000.0,
+    "metodo": "efectivo"
+  },
+  {
+    "id": "10",
+    "fecha": "2025-07-03 17:09:01",
+    "destinatario": "Mundo Electronico",
+    "concepto": "proveedor",
+    "descripcion": "mercaderia",
+    "monto": 1500000.0,
+    "metodo": "efectivo"
   }
 ]

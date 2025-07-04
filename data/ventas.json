@@ -1101,5 +1101,79 @@
     ],
     "total": 96000,
     "fecha": "2025-06-22 03:34:01"
+  },
+  {
+    "id": "a4b631f2-470c-413d-9e52-4ba98ba999aa",
+    "items": [
+      {
+        "id": 2,
+        "nombre": "Remera Oversize",
+        "cantidad": 1,
+        "precio_unitario": 32000
+      },
+      {
+        "id": 3,
+        "nombre": "Buzo Skate",
+        "cantidad": 1,
+        "precio_unitario": 65000
+      }
+    ],
+    "total": 97000,
+    "fecha": "2025-07-02 11:34:24",
+    "metodoPago": "transferencia"
+  },
+  {
+    "id": "0b1a7352-1246-4df9-a841-ab8cd2e837b9",
+    "items": [
+      {
+        "id": 3,
+        "nombre": "Buzo Skate",
+        "cantidad": 1,
+        "precio_unitario": 65000
+      },
+      {
+        "id": 4,
+        "nombre": "Buzo Street",
+        "cantidad": 1,
+        "precio_unitario": 65000
+      },
+      {
+        "id": 5,
+        "nombre": "Buzo Overshirt Denim",
+        "cantidad": 1,
+        "precio_unitario": 72000
+      }
+    ],
+    "total": 202000,
+    "fecha": "2025-07-03 16:16:50",
+    "metodoPago": "efectivo"
+  },
+  {
+    "id": "4bb30d2f-5604-47e2-bdf1-9497da915806",
+    "items": [
+      {
+        "id": 5,
+        "nombre": "Buzo Overshirt Denim",
+        "cantidad": 20,
+        "precio_unitario": 72000
+      }
+    ],
+    "total": 1440000,
+    "fecha": "2025-07-03 16:17:58",
+    "metodoPago": "transferencia"
+  },
+  {
+    "id": "430121ab-9554-4511-b585-6d4345f936d5",
+    "items": [
+      {
+        "id": 2,
+        "nombre": "Remera Oversize",
+        "cantidad": 1,
+        "precio_unitario": 32000
+      }
+    ],
+    "total": 32000,
+    "fecha": "2025-07-04 10:10:10",
+    "metodoPago": "transferencia"
   }
 ]
