@@ -16,7 +16,7 @@ from flask import Blueprint
 from controllers.ventas_controller import registrar_venta, obtener_ventas, actualizar_venta, eliminar_venta
 from controllers.metricas_controller import obtener_metricas
 from controllers.productos_controller import obtener_productos, registrar_producto, eliminar_producto, editar_producto
-from controllers.caja_controller import obtener_caja, registrar_ingreso, registrar_egreso
+from controllers.caja_controller import obtener_caja, registrar_ingreso, registrar_egreso, eliminar_movimiento
 from controllers.calculadora_controller import calcular_precio
 from controllers.pagos_controller import obtener_pagos, registrar_pago
 from controllers.facturas_controller import generar_factura, descargar_pdf
@@ -80,6 +80,8 @@ productos_bp.route('/<int:id>', methods=['PUT'])(editar_producto)       # Editar
 caja_bp.route("/", methods=["GET"])(obtener_caja)                   # Consultar estado de la caja
 caja_bp.route("/ingreso", methods=["POST"])(registrar_ingreso)      # Registrar un ingreso a la caja
 caja_bp.route("/egreso", methods=["POST"])(registrar_egreso)        # Registrar un egreso de la caja
+caja_bp.route("/movimiento/<id>", methods=["DELETE"])(eliminar_movimiento)  # Eliminar movimiento de la caja
+
 
 # ========================
 # Rutas para Calculadora

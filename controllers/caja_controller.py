@@ -182,3 +182,27 @@ def registrar_egreso():
     guardar_caja(caja)
 
     return jsonify({"message": "Egreso registrado correctamente"}), 201
+
+
+def eliminar_movimiento(id):
+    """
+    Elimina un movimiento de la caja por su ID.
+    Recalcula el saldo correctamente según el tipo (ingreso/egreso).
+    """
+    caja = cargar_caja()
+    movimientos = caja.get("movimientos", [])
+    movimiento = next((m for m in movimientos if m["id"] == id), None)
+
+    if not movimiento:
+        return jsonify({"error": "Movimiento no encontrado"}), 404
+
+    # Ajustar el saldo antes de eliminar
+    if movimiento["tipo"] == "ingreso":
+        caja["saldo"] -= movimiento["monto"]
+    elif movimiento["tipo"] == "egreso":
+        caja["saldo"] += movimiento["monto"]
+
+    # Filtrar fuera el movimiento
+    caja["movimientos"] = [m for m in movimientos if m["id"] != id]
+    guardar_caja(caja)
+    return jsonify({"message": "Movimiento eliminado correctamente"}), 200
