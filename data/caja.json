@@ -1,5 +1,5 @@
 {
-  "saldo": 3878000.0,
+  "saldo": 17476000.0,
   "movimientos": [
     {
       "id": "0af025cd-d19a-43cc-8a29-d85c40e12ac5",
@@ -661,6 +661,55 @@
       "monto": 130000,
       "descripcion": "Venta #77",
       "fecha": "2025-07-04 11:13:29"
+    },
+    {
+      "id": "e40d4cd0-85e7-4e6c-9195-f2c1c0191550",
+      "tipo": "ingreso",
+      "monto": 2600000,
+      "descripcion": "Venta #78",
+      "fecha": "2025-07-07 13:17:54"
+    },
+    {
+      "id": "a74a5efa-24e6-44d5-a733-3e3fad8d31a4",
+      "tipo": "ingreso",
+      "monto": 1280000,
+      "descripcion": "Venta #79",
+      "fecha": "2025-07-07 13:26:49"
+    },
+    {
+      "id": "e784ac31-0aef-4999-98b1-eb573bf1903e",
+      "tipo": "ingreso",
+      "monto": 630000,
+      "descripcion": "Venta #80",
+      "fecha": "2025-07-07 13:32:28"
+    },
+    {
+      "id": "a4f43469-fc23-4d30-8225-1efce8a4b7d6",
+      "tipo": "ingreso",
+      "monto": 1440000,
+      "descripcion": "Venta #81",
+      "fecha": "2025-07-07 13:33:26"
+    },
+    {
+      "id": "062df119-b498-43d3-aa4e-288343b7ff35",
+      "tipo": "ingreso",
+      "monto": 18000,
+      "descripcion": "Venta #82",
+      "fecha": "2025-07-07 13:33:49"
+    },
+    {
+      "id": "9d34137e-71b9-4627-9aad-3bbc5be7b74c",
+      "tipo": "ingreso",
+      "monto": 4830000,
+      "descripcion": "Venta #83",
+      "fecha": "2025-07-07 13:34:42"
+    },
+    {
+      "id": "97eca3b1-8bc9-41b3-8fbf-e4faa4d7006d",
+      "tipo": "ingreso",
+      "monto": 2800000,
+      "descripcion": "Venta #84",
+      "fecha": "2025-07-07 13:36:12"
     }
   ]
 }

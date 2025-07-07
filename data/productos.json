@@ -4,18 +4,20 @@
     "nombre": "Remera Oversize",
     "descripcion": "Remera de algod\u00f3n 100% con corte amplio y detalle en costuras",
     "precio": 32000,
-    "stock": 46,
+    "stock": 7,
     "categoria": "Indumentaria",
-    "talle": "L"
+    "talle": "L",
+    "stock_minimo": 7
   },
   {
     "id": 3,
     "nombre": "Buzo Skate",
     "descripcion": "Buzo de algod\u00f3n 100% con capucha ajustable y bolsillo canguro",
     "precio": 65000,
-    "stock": 41,
+    "stock": 1,
     "categoria": "Indumentaria",
-    "talle": "M"
+    "talle": "M",
+    "stock_minimo": 5
   },
   {
     "id": 4,
@@ -24,25 +26,28 @@
     "precio": 65000,
     "stock": 37,
     "categoria": "Indumentaria",
-    "talle": "L"
+    "talle": "L",
+    "stock_minimo": 5
   },
   {
     "id": 5,
     "nombre": "Buzo Overshirt Denim",
     "descripcion": "Sobrecamisa tipo overshirt de jean con bolsillos frontales",
     "precio": 72000,
-    "stock": 22,
+    "stock": 2,
     "categoria": "Indumentaria",
-    "talle": "XL"
+    "talle": "XL",
+    "stock_minimo": 5
   },
   {
     "id": 6,
     "nombre": "Denim Overshirt",
     "descripcion": "Sobrecamisa de jean desgastado con bot\u00f3n met\u00e1lico",
     "precio": 70000,
-    "stock": 41,
+    "stock": 1,
     "categoria": "Indumentaria",
-    "talle": "XXL"
+    "talle": "XXL",
+    "stock_minimo": 5
   },
   {
     "id": 7,
@@ -51,7 +56,8 @@
     "precio": 85000,
     "stock": 35,
     "categoria": "Indumentaria",
-    "talle": "M"
+    "talle": "M",
+    "stock_minimo": 5
   },
   {
     "id": 8,
@@ -60,7 +66,8 @@
     "precio": 42000,
     "stock": 42,
     "categoria": "Indumentaria",
-    "talle": "S"
+    "talle": "S",
+    "stock_minimo": 5
   },
   {
     "id": 9,
@@ -69,7 +76,8 @@
     "precio": 48000,
     "stock": 41,
     "categoria": "Indumentaria",
-    "talle": "L"
+    "talle": "L",
+    "stock_minimo": 5
   },
   {
     "id": 10,
@@ -78,7 +86,8 @@
     "precio": 68000,
     "stock": 41,
     "categoria": "Calzado",
-    "talle": "42"
+    "talle": "42",
+    "stock_minimo": 5
   },
   {
     "id": 11,
@@ -87,7 +96,8 @@
     "precio": 18000,
     "stock": 42,
     "categoria": "Accesorios",
-    "talle": "\u00danico"
+    "talle": "\u00danico",
+    "stock_minimo": 5
   },
   {
     "id": 12,
@@ -96,16 +106,18 @@
     "precio": 25000,
     "stock": 41,
     "categoria": "Accesorios",
-    "talle": "\u00danico"
+    "talle": "\u00danico",
+    "stock_minimo": 5
   },
   {
     "id": 13,
     "nombre": "Mochila Urban Tech",
     "descripcion": "Mochila resistente al agua con compartimentos m\u00faltiples",
     "precio": 55000,
-    "stock": 47,
+    "stock": 5,
     "categoria": "Accesorios",
-    "talle": "\u00danico"
+    "talle": "\u00danico",
+    "stock_minimo": 5
   },
   {
     "id": 14,
@@ -114,7 +126,8 @@
     "precio": 21000,
     "stock": 47,
     "categoria": "Accesorios",
-    "talle": "\u00danico"
+    "talle": "\u00danico",
+    "stock_minimo": 5
   },
   {
     "id": 15,
@@ -123,7 +136,8 @@
     "precio": 12000,
     "stock": 46,
     "categoria": "Accesorios",
-    "talle": "\u00danico"
+    "talle": "\u00danico",
+    "stock_minimo": 5
   },
   {
     "id": 16,
@@ -132,25 +146,28 @@
     "precio": 70000,
     "stock": 46,
     "categoria": "Indumentaria",
-    "talle": "M"
+    "talle": "M",
+    "stock_minimo": 5
   },
   {
     "id": 17,
     "nombre": "Windbreaker Reflective",
     "descripcion": "Rompevientos ligero con bandas reflectantes",
     "precio": 60000,
-    "stock": 46,
+    "stock": 4,
     "categoria": "Indumentaria",
-    "talle": "L"
+    "talle": "L",
+    "stock_minimo": 5
   },
   {
     "id": 18,
     "nombre": "Beanie Ribbed",
     "descripcion": "Gorro de punto acanalado para clima fr\u00edo",
     "precio": 18000,
-    "stock": 39,
+    "stock": 3,
     "categoria": "Accesorios",
-    "talle": "\u00danico"
+    "talle": "\u00danico",
+    "stock_minimo": 5
   },
   {
     "id": 19,
@@ -159,7 +176,8 @@
     "precio": 45000,
     "stock": 46,
     "categoria": "Accesorios",
-    "talle": "\u00danico"
+    "talle": "\u00danico",
+    "stock_minimo": 5
   },
   {
     "id": 20,
@@ -168,6 +186,7 @@
     "precio": 95000,
     "stock": 46,
     "categoria": "Accesorios",
-    "talle": "\u00danico"
+    "talle": "\u00danico",
+    "stock_minimo": 5
   }
 ]

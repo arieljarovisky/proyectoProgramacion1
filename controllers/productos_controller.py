@@ -110,7 +110,9 @@ def registrar_producto():
         "descripcion": data.get('descripcion', ''),
         "precio": precio,
         "stock": stock,
-        "categoria": data.get('categoria', 'Sin categoría')
+        "categoria": data.get('categoria', 'Sin categoría'),
+        "talle": data.get('talle', 'Sin talle'),
+        "stock_minimo": data.get('stock_minimo', 5)
     }
 
     productos.append(nuevo_producto)
@@ -162,6 +164,11 @@ def editar_producto(id):
     if "stock" in data:
         if not (isinstance(data["stock"], int) and data["stock"] >= 0):
             return jsonify({"error": "El stock debe ser un entero mayor o igual a 0"}), 400
+    if "stock_minimo" in data:
+        if not (isinstance(data["stock_minimo"], int) and data["stock_minimo"] >= 0):
+            return jsonify({"error": "El stock mínimo debe ser un entero >= 0"}), 400
+    
+
 
     # Actualizamos solo los campos enviados (ya validados)
     producto_encontrado["nombre"] = data.get("nombre", producto_encontrado["nombre"])
@@ -169,7 +176,7 @@ def editar_producto(id):
     producto_encontrado["precio"] = data.get("precio", producto_encontrado["precio"])
     producto_encontrado["stock"] = data.get("stock", producto_encontrado["stock"])
     producto_encontrado["categoria"] = data.get("categoria", producto_encontrado["categoria"])
-    
+    producto_encontrado["stock_minimo"] = data.get("stock_minimo", producto_encontrado["stock_minimo"])
     guardar_productos(productos)
     
     return jsonify({"message": "Producto actualizado correctamente"}), 200

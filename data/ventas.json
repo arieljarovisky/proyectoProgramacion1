@@ -1189,5 +1189,109 @@
     "total": 130000,
     "fecha": "2025-07-04 11:13:29",
     "metodoPago": "efectivo"
+  },
+  {
+    "id": "e40d4cd0-85e7-4e6c-9195-f2c1c0191550",
+    "items": [
+      {
+        "id": 3,
+        "nombre": "Buzo Skate",
+        "cantidad": 40,
+        "precio_unitario": 65000
+      }
+    ],
+    "total": 2600000,
+    "fecha": "2025-07-07 13:17:54",
+    "metodoPago": "efectivo"
+  },
+  {
+    "id": "a74a5efa-24e6-44d5-a733-3e3fad8d31a4",
+    "items": [
+      {
+        "id": 2,
+        "nombre": "Remera Oversize",
+        "cantidad": 40,
+        "precio_unitario": 32000
+      }
+    ],
+    "total": 1280000,
+    "fecha": "2025-07-07 13:26:49",
+    "metodoPago": "transferencia"
+  },
+  {
+    "id": "e784ac31-0aef-4999-98b1-eb573bf1903e",
+    "items": [
+      {
+        "id": 18,
+        "nombre": "Beanie Ribbed",
+        "cantidad": 35,
+        "precio_unitario": 18000
+      }
+    ],
+    "total": 630000,
+    "fecha": "2025-07-07 13:32:28",
+    "metodoPago": "transferencia"
+  },
+  {
+    "id": "a4f43469-fc23-4d30-8225-1efce8a4b7d6",
+    "items": [
+      {
+        "id": 5,
+        "nombre": "Buzo Overshirt Denim",
+        "cantidad": 20,
+        "precio_unitario": 72000
+      }
+    ],
+    "total": 1440000,
+    "fecha": "2025-07-07 13:33:26",
+    "metodoPago": "efectivo"
+  },
+  {
+    "id": "062df119-b498-43d3-aa4e-288343b7ff35",
+    "items": [
+      {
+        "id": 18,
+        "nombre": "Beanie Ribbed",
+        "cantidad": 1,
+        "precio_unitario": 18000
+      }
+    ],
+    "total": 18000,
+    "fecha": "2025-07-07 13:33:49",
+    "metodoPago": "qr"
+  },
+  {
+    "id": "9d34137e-71b9-4627-9aad-3bbc5be7b74c",
+    "items": [
+      {
+        "id": 17,
+        "nombre": "Windbreaker Reflective",
+        "cantidad": 42,
+        "precio_unitario": 60000
+      },
+      {
+        "id": 13,
+        "nombre": "Mochila Urban Tech",
+        "cantidad": 42,
+        "precio_unitario": 55000
+      }
+    ],
+    "total": 4830000,
+    "fecha": "2025-07-07 13:34:42",
+    "metodoPago": "transferencia"
+  },
+  {
+    "id": "97eca3b1-8bc9-41b3-8fbf-e4faa4d7006d",
+    "items": [
+      {
+        "id": 6,
+        "nombre": "Denim Overshirt",
+        "cantidad": 40,
+        "precio_unitario": 70000
+      }
+    ],
+    "total": 2800000,
+    "fecha": "2025-07-07 13:36:12",
+    "metodoPago": "transferencia"
   }
 ]
