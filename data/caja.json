@@ -1,5 +1,5 @@
 {
-  "saldo": 3748000.0,
+  "saldo": 3878000.0,
   "movimientos": [
     {
       "id": "0af025cd-d19a-43cc-8a29-d85c40e12ac5",
@@ -654,6 +654,13 @@
       "monto": 32000,
       "descripcion": "Venta #76",
       "fecha": "2025-07-04 10:10:10"
+    },
+    {
+      "id": "5c6eae0d-50ae-4062-8e5f-c9ce42406152",
+      "tipo": "ingreso",
+      "monto": 130000,
+      "descripcion": "Venta #77",
+      "fecha": "2025-07-04 11:13:29"
     }
   ]
 }

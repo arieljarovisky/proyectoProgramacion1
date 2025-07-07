@@ -1175,5 +1175,19 @@
     "total": 32000,
     "fecha": "2025-07-04 10:10:10",
     "metodoPago": "transferencia"
+  },
+  {
+    "id": "5c6eae0d-50ae-4062-8e5f-c9ce42406152",
+    "items": [
+      {
+        "id": 3,
+        "nombre": "Buzo Skate",
+        "cantidad": 2,
+        "precio_unitario": 65000
+      }
+    ],
+    "total": 130000,
+    "fecha": "2025-07-04 11:13:29",
+    "metodoPago": "efectivo"
   }
 ]
